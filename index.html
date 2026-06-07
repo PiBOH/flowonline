@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowgorithm Online BETA 1.0.0k</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ============ MAIN APPLICATION WINDOW ============ -->
+    <div class="app-window">
+        
+        <!-- Title Bar -->
+        <div class="title-bar">
+            <div class="title-left">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='4' y='4' width='10' height='8' fill='%2384C44C' stroke='%23333' stroke-width='1.5'/><rect x='18' y='4' width='10' height='8' fill='%23F2A93B' stroke='%23333' stroke-width='1.5'/><polygon points='4,18 14,18 12,26 6,26' fill='%23E14C4C' stroke='%23333' stroke-width='1.5'/><polygon points='18,18 28,18 26,26 20,26' fill='%234B9DDC' stroke='%23333' stroke-width='1.5'/></svg>" class="title-icon">
+                <span class="title-text" id="titleText">Flowgorithm Online BETA 1.0.0k - [Untitled]</span>
+            </div>
+            <div class="title-controls">
+                <button class="win-btn min-btn" title="Minimizza">─</button>
+                <button class="win-btn max-btn" title="Massimizza">▢</button>
+                <button class="win-btn close-btn" title="Chiudi">✕</button>
+            </div>
+        </div>
+
+        <!-- Menu Bar -->
+        <div class="menu-bar">
+            <div class="menu-item" data-menu="file"><span data-i18n="menu.file">File</span>
+                <div class="menu-dropdown">
+                    <div class="menu-option" data-action="new"><span class="menu-icon">📄</span><span data-i18n="menu.new">Nuovo</span><span class="shortcut">Ctrl+N</span></div>
+                    <div class="menu-option" data-action="open"><span class="menu-icon">📂</span><span data-i18n="menu.open">Apri...</span><span class="shortcut">Ctrl+O</span></div>
+                    <div class="menu-option" data-action="save"><span class="menu-icon">💾</span><span data-i18n="menu.save">Salva</span><span class="shortcut">Ctrl+S</span></div>
+                    <div class="menu-option" data-action="saveas"><span class="menu-icon">💾</span><span data-i18n="menu.saveas">Salva con nome...</span></div>
+                    <div class="menu-separator"></div>
+                    <div class="menu-option" data-action="print"><span class="menu-icon">🖨</span><span data-i18n="menu.print">Stampa...</span></div>
+                    <div class="menu-separator"></div>
+                    <div class="menu-option" data-action="exit"><span data-i18n="menu.exit">Esci</span></div>
+                </div>
+            </div>
+            <div class="menu-item" data-menu="edit"><span data-i18n="menu.edit">Modifica</span>
+                <div class="menu-dropdown">
+                    <div class="menu-option" data-action="zoomin"><span data-i18n="menu.zoomin">Zoom In</span><span class="shortcut">Ctrl++</span></div>
+                    <div class="menu-option" data-action="zoomout"><span data-i18n="menu.zoomout">Zoom Out</span><span class="shortcut">Ctrl+-</span></div>
+                    <div class="menu-separator"></div>
+                    <div class="menu-option" data-action="style"><span data-i18n="menu.style">Stile flowchart...</span></div>
+                </div>
+            </div>
+            <div class="menu-item" data-menu="program"><span data-i18n="menu.program">Programma</span>
+                <div class="menu-dropdown">
+                    <div class="menu-option" data-action="run"><span class="menu-icon">▶</span><span data-i18n="menu.run">Esegui</span><span class="shortcut">F5</span></div>
+                    <div class="menu-option" data-action="step"><span class="menu-icon">⏭</span><span data-i18n="menu.step">Passo a passo</span><span class="shortcut">F6</span></div>
+                    <div class="menu-option" data-action="pause"><span class="menu-icon">⏸</span><span data-i18n="menu.pause">Pausa</span><span class="shortcut">F7</span></div>
+                    <div class="menu-option" data-action="stop"><span class="menu-icon">⏹</span><span data-i18n="menu.stop">Stop</span><span class="shortcut">F8</span></div>
+                    <div class="menu-separator"></div>
+                    <div class="menu-option" data-action="speed"><span data-i18n="menu.speed">Velocità esecuzione...</span></div>
+                    <div class="menu-option" data-action="breakpoints"><span data-i18n="menu.breakpoints">Rimuovi breakpoint</span></div>
+                    <div class="menu-separator"></div>
+                    <div class="menu-option" data-action="functions"><span data-i18n="menu.functions">Gestione funzioni...</span></div>
+                    <div class="menu-option" data-action="attributes"><span data-i18n="menu.attributes">Attributi programma...</span></div>
+                </div>
+            </div>
+            <div class="menu-item" data-menu="tools"><span data-i18n="menu.tools">Strumenti</span>
+                <div class="menu-dropdown">
+                    <div class="menu-option" data-action="copyimg"><span data-i18n="menu.copyimg">Copia immagine</span></div>
+                    <div class="menu-option" data-action="exportimg"><span data-i18n="menu.exportimg">Esporta immagine...</span></div>
+                    <div class="menu-option" data-action="exportvec"><span data-i18n="menu.exportvec">Esporta vettoriale...</span></div>
+                    <div class="menu-separator"></div>
+                    <div class="menu-option" data-action="language"><span data-i18n="menu.language">Cambia lingua...</span></div>
+                    <div class="menu-option" data-action="console"><span data-i18n="menu.console">Finestra console</span></div>
+                    <div class="menu-option" data-action="sourceview"><span data-i18n="menu.sourceview">Visualizzatore codice sorgente</span></div>
+                    <div class="menu-option" data-action="variables"><span data-i18n="menu.variables">Variabili</span></div>
+                    <div class="menu-option" data-action="layout"><span data-i18n="menu.layout">Disposizione finestre</span></div>
+                </div>
+            </div>
+            <div class="menu-item" data-menu="help"><span data-i18n="menu.help">Aiuto</span>
+                <div class="menu-dropdown">
+                    <div class="menu-option" data-action="about"><span data-i18n="menu.about">Informazioni su Flowgorithm</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toolbar -->
+        <div class="toolbar">
+            <button class="tool-btn" data-tool="open" data-i18n-title="toolbar.open" title="Apri (Ctrl+O)">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 6h6l2 2h10v11H3z" fill="#F4C842" stroke="#8B6914" stroke-width="1"/><path d="M3 8h18v11H3z" fill="#FFD968" stroke="#8B6914" stroke-width="1"/></svg>
+            </button>
+            <button class="tool-btn" data-tool="save" title="Salva (Ctrl+S)">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 3h15l3 3v15H3z" fill="#4A6FA5" stroke="#1F3354" stroke-width="1"/><rect x="6" y="3" width="10" height="6" fill="#E6EEF7" stroke="#1F3354" stroke-width="0.8"/><rect x="13" y="4" width="2" height="4" fill="#1F3354"/><rect x="6" y="13" width="12" height="7" fill="#E6EEF7" stroke="#1F3354" stroke-width="0.8"/></svg>
+            </button>
+            <div class="toolbar-sep"></div>
+            <button class="tool-btn" data-tool="run" title="Esegui (F5)">
+                <svg viewBox="0 0 24 24" width="22" height="22"><polygon points="5,3 21,12 5,21" fill="#3FA847" stroke="#1F5C24" stroke-width="1"/></svg>
+            </button>
+            <button class="tool-btn" data-tool="step" title="Passo a passo (F6)">
+                <svg viewBox="0 0 24 24" width="22" height="22"><polygon points="4,4 14,12 4,20" fill="#3FA847" stroke="#1F5C24" stroke-width="1"/><rect x="16" y="4" width="4" height="16" fill="#3FA847" stroke="#1F5C24" stroke-width="1"/></svg>
+            </button>
+            <button class="tool-btn" data-tool="pause" title="Pausa (F7)">
+                <svg viewBox="0 0 24 24" width="22" height="22"><rect x="5" y="4" width="5" height="16" fill="#E8A33A" stroke="#7A5418" stroke-width="1"/><rect x="14" y="4" width="5" height="16" fill="#E8A33A" stroke="#7A5418" stroke-width="1"/></svg>
+            </button>
+            <button class="tool-btn" data-tool="stop" title="Stop (F8)">
+                <svg viewBox="0 0 24 24" width="22" height="22"><rect x="4" y="4" width="16" height="16" fill="#D44545" stroke="#7A1F1F" stroke-width="1"/></svg>
+            </button>
+            <button class="tool-btn" data-tool="speed" title="Velocità esecuzione">
+                <svg viewBox="0 0 24 24" width="22" height="22"><polygon points="3,4 11,12 3,20" fill="#3FA847" stroke="#1F5C24" stroke-width="1"/><rect x="13" y="4" width="3" height="4" fill="#888"/><rect x="13" y="10" width="6" height="4" fill="#888"/><rect x="13" y="16" width="9" height="4" fill="#888"/></svg>
+            </button>
+            <div class="toolbar-sep"></div>
+            <button class="tool-btn" data-tool="main" title="Programma principale">
+                <span style="font-weight:bold; font-size:11px; padding: 0 4px;">Main</span>
+            </button>
+            <button class="tool-btn" data-tool="functions" title="Gestione funzioni">
+                <svg viewBox="0 0 24 24" width="22" height="22"><rect x="3" y="4" width="14" height="6" fill="#E87FB4" stroke="#7A2954" stroke-width="1"/><rect x="7" y="13" width="14" height="6" fill="#E87FB4" stroke="#7A2954" stroke-width="1"/></svg>
+            </button>
+            <div class="toolbar-sep"></div>
+            <button class="tool-btn" data-tool="zoomin" title="Zoom In">
+                <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="10" cy="10" r="6" fill="none" stroke="#333" stroke-width="2"/><line x1="14" y1="14" x2="20" y2="20" stroke="#333" stroke-width="3"/><line x1="7" y1="10" x2="13" y2="10" stroke="#333" stroke-width="2"/><line x1="10" y1="7" x2="10" y2="13" stroke="#333" stroke-width="2"/></svg>
+            </button>
+            <button class="tool-btn" data-tool="zoomout" title="Zoom Out">
+                <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="10" cy="10" r="6" fill="none" stroke="#333" stroke-width="2"/><line x1="14" y1="14" x2="20" y2="20" stroke="#333" stroke-width="3"/><line x1="7" y1="10" x2="13" y2="10" stroke="#333" stroke-width="2"/></svg>
+            </button>
+            <div class="toolbar-sep"></div>
+            <button class="tool-btn" data-tool="colorscheme" title="Schema colori">
+                <svg viewBox="0 0 24 24" width="22" height="22"><rect x="3" y="3" width="6" height="6" fill="#E14C4C"/><rect x="9" y="3" width="6" height="6" fill="#4B9DDC"/><rect x="15" y="3" width="6" height="6" fill="#84C44C"/><rect x="3" y="9" width="6" height="6" fill="#F2A93B"/><rect x="9" y="9" width="6" height="6" fill="#9C5CB4"/><rect x="15" y="9" width="6" height="6" fill="#E87FB4"/></svg>
+            </button>
+            <button class="tool-btn" data-tool="layout" title="Disposizione finestre">
+                <svg viewBox="0 0 24 24" width="22" height="22"><rect x="2" y="3" width="11" height="18" fill="#DDE" stroke="#333" stroke-width="1"/><rect x="15" y="3" width="7" height="8" fill="#DDE" stroke="#333" stroke-width="1"/><rect x="15" y="13" width="7" height="8" fill="#DDE" stroke="#333" stroke-width="1"/></svg>
+            </button>
+            <button class="tool-btn" data-tool="variables" title="Finestra Variabili">
+                <svg viewBox="0 0 24 24" width="22" height="22"><rect x="2" y="3" width="20" height="18" fill="#F0F0F0" stroke="#333" stroke-width="1"/><text x="12" y="16" text-anchor="middle" font-size="11" font-weight="bold" font-style="italic" fill="#333">x=</text></svg>
+            </button>
+            <button class="tool-btn" data-tool="console" title="Finestra Console">
+                <svg viewBox="0 0 24 24" width="22" height="22"><rect x="2" y="3" width="20" height="18" fill="#222" stroke="#000" stroke-width="1"/><text x="4" y="11" font-size="6" fill="#4F4">&gt;_</text><text x="4" y="18" font-size="6" fill="#4F4">run</text></svg>
+            </button>
+            <button class="tool-btn" data-tool="turtle" title="Finestra Tartaruga">
+                <svg viewBox="0 0 24 24" width="22" height="22"><ellipse cx="12" cy="13" rx="7" ry="5" fill="#3D8B3D" stroke="#1F4D1F" stroke-width="1"/><circle cx="12" cy="7" r="2.5" fill="#3D8B3D" stroke="#1F4D1F" stroke-width="1"/><circle cx="6" cy="10" r="1.5" fill="#3D8B3D"/><circle cx="18" cy="10" r="1.5" fill="#3D8B3D"/><circle cx="6" cy="16" r="1.5" fill="#3D8B3D"/><circle cx="18" cy="16" r="1.5" fill="#3D8B3D"/></svg>
+            </button>
+            <button class="tool-btn" data-tool="sourceview" title="Visualizzatore codice">
+                <svg viewBox="0 0 24 24" width="22" height="22"><rect x="2" y="3" width="20" height="18" fill="#FFF" stroke="#333" stroke-width="1"/><rect x="4" y="5" width="10" height="2" fill="#4B9DDC"/><rect x="4" y="8" width="14" height="2" fill="#E14C4C"/><rect x="4" y="11" width="8" height="2" fill="#84C44C"/><rect x="4" y="14" width="12" height="2" fill="#F2A93B"/><rect x="4" y="17" width="9" height="2" fill="#9C5CB4"/></svg>
+            </button>
+            <div class="toolbar-sep"></div>
+            <div class="lang-selector" title="Cambia lingua">
+                <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="9" fill="#4B9DDC" stroke="#1F3354" stroke-width="1"/><path d="M3 12 H21 M12 3 Q7 12 12 21 Q17 12 12 3" fill="none" stroke="#FFF" stroke-width="1"/></svg>
+                <select id="languageSelector" class="lang-dropdown">
+                    <option value="it">🇮🇹 Italiano</option>
+                    <option value="en">🇬🇧 English</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="de">🇩🇪 Deutsch</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-area">
+            <!-- Flowchart Canvas -->
+            <div class="flowchart-canvas" id="flowchartCanvas">
+                <svg id="connectorsSvg" class="connectors-svg"></svg>
+                <div class="flowchart-content" id="flowchartContent">
+                    <!-- Main label -->
+                    <div class="function-label" id="mainLabel">Main</div>
+                    
+                    <!-- Start oval -->
+                    <div class="flow-shape shape-terminal start-shape" data-type="start">
+                        <div class="shape-content" id="startLabel">Inizio</div>
+                    </div>
+                    
+                    <!-- Container for dynamic shapes -->
+                    <div class="shapes-container" id="shapesContainer">
+                        <!-- Insertion line (clickable to add shapes) -->
+                        <div class="insertion-line" data-position="0">
+                            <div class="insertion-dot"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- End oval -->
+                    <div class="flow-shape shape-terminal end-shape" data-type="end">
+                        <div class="shape-content" id="endLabel">Fine</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-section" id="statusMessage">Pronto</div>
+            <div class="status-section"><span data-i18n="status.zoom">Zoom</span>: <span id="zoomLevel">100%</span></div>
+            <div class="status-section"><span data-i18n="status.shapes">Forme</span>: <span id="shapeCount">0</span></div>
+            <div class="status-section flex-grow" id="statusLanguage">Italiano</div>
+            <div class="status-section version-info">BETA 1.0.0k</div>
+        </div>
+    </div>
+
+    <!-- ============ CONTEXT MENU FOR ADDING SHAPES ============ -->
+    <div class="context-menu" id="shapeMenu">
+        <div class="context-header" data-i18n="ctx.header">Aggiungi forma</div>
+        <div class="context-item" data-shape="assign">
+            <svg viewBox="0 0 60 30" width="42" height="22"><rect x="2" y="2" width="56" height="26" fill="#7BB8E8" stroke="#1F3354" stroke-width="1.5"/></svg>
+            <span data-i18n="ctx.assign">Assegna</span>
+        </div>
+        <div class="context-item" data-shape="declare">
+            <svg viewBox="0 0 60 30" width="42" height="22"><rect x="2" y="2" width="56" height="26" fill="#B0B0B0" stroke="#333" stroke-width="1.5"/></svg>
+            <span data-i18n="ctx.declare">Dichiara</span>
+        </div>
+        <div class="context-item" data-shape="input">
+            <svg viewBox="0 0 60 30" width="42" height="22"><polygon points="10,2 58,2 50,28 2,28" fill="#5BC9F0" stroke="#1F4F7A" stroke-width="1.5"/></svg>
+            <span data-i18n="ctx.input">Input</span>
+        </div>
+        <div class="context-item" data-shape="output">
+            <svg viewBox="0 0 60 30" width="42" height="22"><polygon points="10,2 58,2 50,28 2,28" fill="#7FCC7F" stroke="#1F5C1F" stroke-width="1.5"/></svg>
+            <span data-i18n="ctx.output">Output</span>
+        </div>
+        <div class="context-separator"></div>
+        <div class="context-item" data-shape="if">
+            <svg viewBox="0 0 60 30" width="42" height="22"><polygon points="30,2 58,15 30,28 2,15" fill="#F4C842" stroke="#7A5418" stroke-width="1.5"/></svg>
+            <span data-i18n="ctx.if">Se (If)</span>
+        </div>
+        <div class="context-item" data-shape="while">
+            <svg viewBox="0 0 60 30" width="42" height="22"><polygon points="10,2 50,2 58,15 50,28 10,28 2,15" fill="#E87FB4" stroke="#7A2954" stroke-width="1.5"/></svg>
+            <span data-i18n="ctx.while">Mentre (While)</span>
+        </div>
+        <div class="context-item" data-shape="do">
+            <svg viewBox="0 0 60 30" width="42" height="22"><polygon points="10,2 50,2 58,15 50,28 10,28 2,15" fill="#E87FB4" stroke="#7A2954" stroke-width="1.5"/></svg>
+            <span data-i18n="ctx.do">Do (Do While)</span>
+        </div>
+        <div class="context-item" data-shape="for">
+            <svg viewBox="0 0 60 30" width="42" height="22"><polygon points="10,2 50,2 58,15 50,28 10,28 2,15" fill="#E87FB4" stroke="#7A2954" stroke-width="1.5"/></svg>
+            <span data-i18n="ctx.for">Per (For)</span>
+        </div>
+        <div class="context-separator"></div>
+        <div class="context-item" data-shape="call">
+            <svg viewBox="0 0 60 30" width="42" height="22"><rect x="2" y="2" width="56" height="26" fill="#C8A4DC" stroke="#4F2C5C" stroke-width="1.5"/><line x1="8" y1="2" x2="8" y2="28" stroke="#4F2C5C" stroke-width="1.5"/><line x1="52" y1="2" x2="52" y2="28" stroke="#4F2C5C" stroke-width="1.5"/></svg>
+            <span data-i18n="ctx.call">Chiamata</span>
+        </div>
+        <div class="context-item" data-shape="comment">
+            <svg viewBox="0 0 60 30" width="42" height="22"><path d="M2,4 Q2,2 4,2 L56,2 Q58,2 58,4 L58,24 Q58,28 54,26 L4,26 Q2,26 2,24 Z" fill="#FFF9B0" stroke="#7A6914" stroke-width="1.5"/></svg>
+            <span data-i18n="ctx.comment">Commento</span>
+        </div>
+        <div class="context-item" data-shape="breakpoint">
+            <svg viewBox="0 0 60 30" width="42" height="22"><circle cx="30" cy="15" r="12" fill="#D44545" stroke="#7A1F1F" stroke-width="1.5"/></svg>
+            <span data-i18n="ctx.breakpoint">Breakpoint</span>
+        </div>
+        <div class="context-separator"></div>
+        <div class="context-item disabled" data-shape="paste">
+            <span style="margin-left:46px;" data-i18n="ctx.paste">Incolla</span>
+        </div>
+    </div>
+
+    <!-- ============ EDIT DIALOG ============ -->
+    <div class="modal-overlay" id="editDialog">
+        <div class="dialog-window">
+            <div class="dialog-titlebar">
+                <span id="dialogTitle">Modifica Forma</span>
+                <button class="dialog-close" id="dialogClose">✕</button>
+            </div>
+            <div class="dialog-body" id="dialogBody">
+                <!-- Dynamic content -->
+            </div>
+            <div class="dialog-footer">
+                <button class="dialog-btn primary" id="dialogOk">OK</button>
+                <button class="dialog-btn" id="dialogCancel">Annulla</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ CONSOLE WINDOW (FLOATING) ============ -->
+    <div class="floating-window console-window" id="consoleWindow" style="display:none;">
+        <div class="floating-titlebar">
+            <div class="floating-title">
+                <svg viewBox="0 0 24 24" width="14" height="14"><rect x="2" y="3" width="20" height="18" fill="#222"/><text x="4" y="11" font-size="6" fill="#4F4">&gt;_</text></svg>
+                <span data-i18n="window.console">Console</span>
+            </div>
+            <div class="floating-controls">
+                <button class="floating-btn" id="consoleClear" data-i18n-title="window.clear" title="Pulisci">⟲</button>
+                <button class="floating-btn" id="consoleClose">✕</button>
+            </div>
+        </div>
+        <div class="console-body" id="consoleBody"></div>
+        <div class="console-input-area" id="consoleInputArea" style="display:none;">
+            <span class="console-prompt">▶</span>
+            <input type="text" id="consoleInput" data-i18n-placeholder="window.inputPlaceholder" placeholder="Inserisci un valore..." autocomplete="off">
+            <button id="consoleSubmit" data-i18n="window.submit">Invio</button>
+        </div>
+    </div>
+
+    <!-- ============ VARIABLES WINDOW (FLOATING) ============ -->
+    <div class="floating-window variables-window" id="variablesWindow" style="display:none;">
+        <div class="floating-titlebar">
+            <div class="floating-title">
+                <span style="font-style:italic; font-weight:bold;">x=</span>
+                <span data-i18n="window.variables">Variabili</span>
+            </div>
+            <div class="floating-controls">
+                <button class="floating-btn" id="variablesClose">✕</button>
+            </div>
+        </div>
+        <div class="variables-body">
+            <table class="variables-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="var.name">Nome</th>
+                        <th data-i18n="var.type">Tipo</th>
+                        <th data-i18n="var.value">Valore</th>
+                    </tr>
+                </thead>
+                <tbody id="variablesBody">
+                    <tr class="empty-row"><td colspan="3" data-i18n="var.empty">Nessuna variabile</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ============ SOURCE CODE WINDOW (FLOATING) ============ -->
+    <div class="floating-window source-window" id="sourceWindow" style="display:none;">
+        <div class="floating-titlebar">
+            <div class="floating-title">
+                <span data-i18n="window.source">Visualizzatore Codice Sorgente</span>
+            </div>
+            <div class="floating-controls">
+                <select id="languageSelect" class="lang-select">
+                    <option value="auto">Pseudocodice</option>
+                    <option value="c">C</option>
+                    <option value="cpp">C++</option>
+                    <option value="csharp">C#</option>
+                    <option value="java">Java</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="vb">Visual Basic</option>
+                </select>
+                <button class="floating-btn" id="sourceClose">✕</button>
+            </div>
+        </div>
+        <div class="source-body">
+            <pre id="sourceCode"></pre>
+        </div>
+    </div>
+
+    <!-- ============ ABOUT WINDOW (MODAL) ============ -->
+    <div class="modal-overlay" id="aboutWindow" style="display:none;">
+        <div class="dialog-window about-dialog">
+            <div class="dialog-titlebar">
+                <span>Informazioni su Flowgorithm Online</span>
+                <button class="dialog-close" id="aboutClose">✕</button>
+            </div>
+            <div class="dialog-body about-body">
+                <div class="about-header">
+                    <h2>Flowgorithm Online</h2>
+                    <p class="version">Versione BETA 1.0.0k</p>
+                </div>
+                <div class="about-info">
+                    <p><strong>Autore:</strong> <a href="https://piboh.github.io" target="_blank">PiBOH</a></p>
+                    <p><strong>Sito web:</strong> <a href="https://piboh.github.io" target="_blank">https://piboh.github.io</a></p>
+                    <p><strong>Licenza:</strong> MIT License</p>
+                </div>
+                <div class="about-description">
+                    <p>Replica web dell'interfaccia di Flowgorithm per scopi didattici.</p>
+                    <p>Permette di creare, modificare ed eseguire flowchart in modo visuale.</p>
+                </div>
+                <div class="about-license">
+                    <h3>Licenza MIT</h3>
+                    <pre class="license-text">Copyright (c) 2026 PiBOH
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</pre>
+                </div>
+            </div>
+            <div class="dialog-footer">
+                <button class="dialog-btn primary" id="aboutOk">Chiudi</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

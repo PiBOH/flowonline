@@ -1,0 +1,1952 @@
+/* ============================================
+   FLOWGORITHM CLONE - STYLE.CSS
+   Replica fedele dell'interfaccia di Flowgorithm
+   ============================================ */
+
+/* Stili tema base */
+:root {
+    --bg-color: #F0F0F0;
+    --border-color: #1F3354;
+}
+/* Esempio di applicazione stili (estendibile) */
+:root.style-dark { --bg-color: #333; --border-color: #555; }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    background: #2A4870;
+    user-select: none;
+}
+
+/* ============ MAIN APPLICATION WINDOW ============ */
+.app-window {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #F0F0F0;
+    border: 1px solid #1F3354;
+}
+
+/* ============ TITLE BAR ============ */
+.title-bar {
+    height: 28px;
+    background: linear-gradient(to bottom, #5B8DC4 0%, #3E6FA8 50%, #2F5A8C 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 6px;
+    border-bottom: 1px solid #1F3354;
+}
+
+.title-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.title-icon {
+    width: 18px;
+    height: 18px;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.title-text {
+    font-size: 12px;
+    font-weight: 600;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+    color: #FFF;
+}
+
+.title-controls {
+    display: flex;
+    height: 100%;
+}
+
+.win-btn {
+    width: 44px;
+    height: 28px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s;
+}
+
+.win-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.close-btn:hover {
+    background: #E81123;
+}
+
+/* ============ MENU BAR ============ */
+.menu-bar {
+    height: 24px;
+    background: #F0F0F0;
+    border-bottom: 1px solid #C8C8C8;
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    position: relative;
+    z-index: 100;
+}
+
+.menu-item {
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #000;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item:hover, .menu-item.active {
+    background: #C9DEF5;
+    border: 1px solid #5B8DC4;
+    border-radius: 2px;
+    padding: 3px 9px;
+}
+
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: #F5F5F5;
+    border: 1px solid #999;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+    z-index: 200;
+    padding: 2px;
+}
+
+.menu-item.active .menu-dropdown {
+    display: block;
+}
+
+.menu-option {
+    padding: 5px 28px 5px 8px;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #000;
+    position: relative;
+}
+
+.menu-option:hover {
+    background: #C9DEF5;
+}
+
+.menu-icon {
+    width: 16px;
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+}
+
+.shortcut {
+    margin-left: auto;
+    color: #555;
+    font-size: 11px;
+    padding-left: 30px;
+}
+
+.menu-separator {
+    height: 1px;
+    background: #CCC;
+    margin: 3px 4px;
+}
+
+/* ============ TOOLBAR ============ */
+.toolbar {
+    height: 36px;
+    background: linear-gradient(to bottom, #FAFAFA, #E4E4E4);
+    border-bottom: 1px solid #B0B0B0;
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    gap: 1px;
+}
+
+.tool-btn {
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s;
+    padding: 0;
+}
+
+.tool-btn:hover {
+    background: linear-gradient(to bottom, #E8F0FB, #C9DEF5);
+    border-color: #5B8DC4;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.tool-btn:active {
+    background: linear-gradient(to bottom, #9EC3E8, #7AAFE0);
+    border-color: #3E6FA8;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.tool-btn[data-tool="main"] {
+    width: auto;
+    min-width: 56px;
+    padding: 0 10px;
+    color: #1F3354;
+    font-weight: bold;
+    background: linear-gradient(to bottom, #F8F8F8, #E0E0E0);
+    border: 1px solid #999;
+}
+
+.toolbar-sep {
+    width: 1px;
+    height: 24px;
+    background: #B0B0B0;
+    margin: 0 6px;
+    box-shadow: 1px 0 0 #FAFAFA;
+}
+
+/* ============ MAIN AREA / CANVAS ============ */
+.main-area {
+    flex: 1;
+    overflow: auto;
+    background: #FFFFFF;
+    position: relative;
+}
+
+.flowchart-canvas {
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    padding: 30px 0 50px 0;
+    background: 
+        linear-gradient(to right, rgba(200,200,210,0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(200,200,210,0.15) 1px, transparent 1px),
+        #FFFFFF;
+    background-size: 20px 20px;
+    overflow: auto;
+}
+
+.connectors-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.flowchart-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    z-index: 2;
+    padding-bottom: 100px;
+}
+
+.function-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 12px;
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+}
+
+/* ============ FLOWCHART SHAPES ============ */
+.flow-shape {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: filter 0.15s, transform 0.15s;
+    z-index: 3;
+}
+
+.flow-shape:hover {
+    filter: brightness(1.08) drop-shadow(0 0 6px rgba(75, 157, 220, 0.6));
+}
+
+.flow-shape.selected {
+    filter: drop-shadow(0 0 8px rgba(255, 100, 0, 0.8));
+}
+
+.flow-shape.executing {
+    animation: pulse-executing 0.8s infinite;
+}
+
+@keyframes pulse-executing {
+    0%, 100% { filter: drop-shadow(0 0 4px rgba(255, 200, 0, 0.8)); }
+    50% { filter: drop-shadow(0 0 16px rgba(255, 200, 0, 1)); }
+}
+
+.shape-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 10px 22px;
+    font-size: 13px;
+    color: #000;
+    font-family: "Consolas", "Courier New", monospace;
+    white-space: nowrap;
+    min-width: 120px;
+}
+
+/* Terminal (Start/End) - Oval */
+.shape-terminal {
+    width: 180px;
+    height: 46px;
+    background: linear-gradient(to bottom, #C8C8C8, #989898);
+    border: 2px solid #333;
+    border-radius: 23px;
+    margin: 0;
+    box-shadow: inset 0 1px 2px rgba(255,255,255,0.4), 0 2px 3px rgba(0,0,0,0.15);
+}
+
+.shape-terminal .shape-content {
+    padding: 0;
+    color: #000;
+    font-weight: bold;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 14px;
+}
+
+/* Assign - Rectangle (Blue) */
+.shape-assign {
+    background: linear-gradient(to bottom, #9CC8F0, #5BA0D8);
+    border: 2px solid #1F3354;
+    min-width: 200px;
+    margin: 0;
+    box-shadow: inset 0 1px 2px rgba(255,255,255,0.4), 0 2px 3px rgba(0,0,0,0.15);
+}
+
+/* Declare - Rectangle (Gray) */
+.shape-declare {
+    background: linear-gradient(to bottom, #D8D8D8, #A8A8A8);
+    border: 2px solid #555;
+    min-width: 200px;
+    margin: 0;
+    box-shadow: inset 0 1px 2px rgba(255,255,255,0.4), 0 2px 3px rgba(0,0,0,0.15);
+}
+
+/* Input - Parallelogram (Cyan) */
+.shape-input {
+    background: transparent;
+    min-width: 200px;
+    margin: 0 0 0 14px;
+    position: relative;
+    height: 46px;
+}
+.shape-input .shape-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, #7DD9F5, #3BB0E0);
+    border: 2px solid #1F4F7A;
+    transform: skewX(-18deg);
+    z-index: 1;
+    box-shadow: inset 0 1px 2px rgba(255,255,255,0.4);
+}
+
+/* Output - Parallelogram (Green) */
+.shape-output {
+    background: transparent;
+    min-width: 200px;
+    margin: 0 0 0 14px;
+    position: relative;
+    height: 46px;
+}
+.shape-output .shape-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, #A0DDA0, #5FBB5F);
+    border: 2px solid #1F5C1F;
+    transform: skewX(-18deg);
+    z-index: 1;
+    box-shadow: inset 0 1px 2px rgba(255,255,255,0.4);
+}
+
+/* If - Diamond (Yellow) */
+.shape-if {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    position: relative;
+}
+
+.diamond-shape {
+    position: relative;
+    width: 240px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.diamond-shape svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+.diamond-shape .diamond-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #000;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 13px;
+    padding: 0 24px;
+}
+
+/* If branches container */
+/* If branches - Layout classico Flowgorithm con merge point */
+.if-branches {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0;
+    position: relative;
+    padding-top: 20px;
+}
+
+/* Linea verticale dal diamante */
+.shape-if > .diamond-shape::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: #555;
+    z-index: 1;
+}
+
+/* Linee orizzontali che escono dal diamante */
+.if-branches::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20%;
+    right: 20%;
+    height: 2px;
+    background: #555;
+    z-index: 0;
+}
+
+/* Rami dell'If */
+.if-branch {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+/* La linea verticale centrale di ogni ramo che collega cima e fondo */
+.if-branch::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: #555;
+    z-index: -1;
+}
+
+.branch-label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+    padding: 0 8px;
+    background: white;
+    z-index: 3;
+}
+
+.branch-label.true-label {
+    color: #2F7F2F;
+}
+
+.branch-label.false-label {
+    color: #B82020;
+}
+
+/* Merge point (cerchio bianco) */
+.if-merge-point {
+    width: 14px;
+    height: 14px;
+    background: white;
+    border: 2px solid #555;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+
+/* Linea che esce dal merge point verso il basso */
+.if-merge-point::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: #555;
+}
+
+.shape-if .if-branches > .if-branch:last-child {
+    /* True branch (destra) */
+    align-items: center;
+}
+
+/* Connettore di ricongiungimento alla fine dell'if */
+.if-end-connector {
+    width: 2px;
+    height: 15px;
+    background: #555;
+    margin: 0 auto;
+    position: relative;
+}
+
+.if-end-connector::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #555;
+}
+
+/* Spaziatura tra i blocchi */
+.shapes-container > .flow-shape {
+    margin: 8px 0;
+}
+
+.shape-if, .shape-loop {
+    margin: 8px 0;
+}
+
+/* ============================================
+   LOOP SHAPE - Layout a tabella
+   - True branch (corpo del loop) a destra con curva di ritorno
+   - False branch (uscita) prosegue verso il basso al centro
+   ============================================ */
+.shape-loop {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    position: relative;
+}
+
+/* Hexagon (la condizione del loop) */
+.hexagon-shape {
+    position: relative;
+    width: 240px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+}
+.hexagon-shape svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+.hexagon-shape .hex-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #000;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 13px;
+    padding: 0 30px;
+}
+
+/* La tabella che organizza il layout del loop */
+.loop-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.loop-table td {
+    padding: 0;
+    vertical-align: top;
+    position: relative;
+}
+
+/* Larghezze fisse per le 3 colonne */
+.loop-cell-return,
+.loop-cell-return-up,
+.loop-cell-return-side,
+.loop-cell-return-corner {
+    width: 60px;
+}
+
+.loop-cell-false-label,
+.loop-cell-false-line {
+    width: 80px;
+}
+
+.loop-cell-true-label,
+.loop-cell-body {
+    min-width: 240px;
+}
+
+/* RIGA 1: l'esagono occupa il centro+destra (colspan 2) */
+.loop-row-hex .loop-cell-hex {
+    text-align: center;
+    padding-top: 0;
+}
+
+/* RIGA 2: etichette True/False */
+.loop-cell-false-label,
+.loop-cell-true-label {
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: 30px;
+}
+
+/* La cella della return-up disegna l'angolo in alto a sinistra del ritorno */
+.loop-cell-return-up {
+    height: 30px;
+    border-top: 2px solid #7A2954;
+    border-left: 2px solid #7A2954;
+    border-top-left-radius: 10px;
+    /* La linea orizzontale superiore del ritorno arriva fino all'esagono */
+    box-shadow: none;
+}
+
+/* La cella di return-up deve avere la linea che si estende verso destra fino al centro dell'esagono */
+.loop-cell-return-up::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 100%;
+    /* Si estende fino al centro dell'esagono (60px return + 80px false_label = 140px, centro esagono = 60+80+120 = 260, quindi serve 120px da fine return-up) */
+    width: 120px;
+    height: 2px;
+    background: #7A2954;
+}
+
+/* La linea verticale del ramo False (centro) */
+.loop-cell-false-label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: #555;
+    z-index: 0;
+}
+
+.loop-cell-false-label .branch-label {
+    position: relative;
+    z-index: 2;
+}
+
+/* La linea verticale del ramo True (destra) - si collega all'esagono in alto */
+.loop-cell-true-label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: #7A2954;
+    z-index: 0;
+}
+
+.loop-cell-true-label .branch-label {
+    position: relative;
+    z-index: 2;
+}
+
+/* RIGA 3: corpo del loop */
+.loop-cell-body {
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Linea verticale al centro del body (ramo True) */
+.loop-cell-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: #7A2954;
+    z-index: 0;
+}
+
+/* Linea verticale del ramo False che continua per tutta l'altezza */
+.loop-cell-false-line {
+    position: relative;
+}
+.loop-cell-false-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: #555;
+    z-index: 0;
+}
+
+/* Linea verticale di ritorno a sinistra */
+.loop-cell-return-side {
+    position: relative;
+}
+.loop-cell-return-side::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    background: #7A2954;
+    z-index: 0;
+}
+
+/* RIGA 4 (bottom): angolo in basso a sinistra del ritorno */
+.loop-row-bottom td {
+    height: 30px;
+}
+
+.loop-cell-return-corner {
+    border-bottom: 2px solid #7A2954;
+    border-left: 2px solid #7A2954;
+    border-bottom-left-radius: 10px;
+    position: relative;
+}
+
+/* La linea orizzontale inferiore del ritorno arriva fino al centro del corpo */
+.loop-cell-return-corner::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 100%;
+    /* Da fine return-corner fino al centro del body: false_label (80px) + metà body (~120px) = 200px */
+    width: 200px;
+    height: 2px;
+    background: #7A2954;
+}
+
+/* La cella merge contiene la linea verticale centrale (False) che esce */
+.loop-cell-merge {
+    position: relative;
+}
+.loop-cell-merge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    /* Centrato sulla colonna False (che è la prima delle 2 del colspan) */
+    left: calc(80px / 2);
+    transform: translateX(-50%);
+    width: 2px;
+    background: #555;
+    z-index: 0;
+}
+
+/* Il corpo del loop dove si inseriscono i blocchi */
+.loop-body-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Etichette branch standardizzate */
+.branch-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    color: #FFF;
+    background: #555;
+    padding: 2px 10px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.branch-label.true-label { background: #2F7F2F; }
+.branch-label.false-label { background: #B82020; }
+
+/* Call shape (Subroutine - Purple with double lines) */
+.shape-call {
+    background: linear-gradient(to bottom, #DCB8E8, #B888CC);
+    border: 2px solid #4F2C5C;
+    min-width: 200px;
+    margin: 0;
+    position: relative;
+    box-shadow: inset 0 1px 2px rgba(255,255,255,0.4);
+}
+.shape-call::before,
+.shape-call::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #4F2C5C;
+}
+.shape-call::before { left: 8px; }
+.shape-call::after { right: 8px; }
+
+/* Comment shape (Yellow note) */
+.shape-comment {
+    background: linear-gradient(to bottom, #FFFCC8, #F5EC85);
+    border: 2px solid #7A6914;
+    border-radius: 4px;
+    min-width: 200px;
+    margin: 0;
+    font-style: italic;
+    box-shadow: inset 0 1px 2px rgba(255,255,255,0.4);
+}
+
+/* Breakpoint - Red circle */
+.shape-breakpoint {
+    width: 32px;
+    height: 32px;
+    background: radial-gradient(circle at 30% 30%, #F08585, #B82020);
+    border: 2px solid #7A1F1F;
+    border-radius: 50%;
+    margin: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+.shape-breakpoint .shape-content {
+    padding: 0;
+    min-width: 0;
+    color: white;
+    font-weight: bold;
+}
+
+/* Delete button on hover */
+.shape-delete {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 18px;
+    height: 18px;
+    background: #D44545;
+    border: 1px solid #7A1F1F;
+    border-radius: 50%;
+    color: white;
+    font-size: 11px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    line-height: 1;
+}
+
+.flow-shape:hover .shape-delete,
+.diamond-shape:hover .shape-delete,
+.hexagon-shape:hover .shape-delete {
+    display: flex;
+}
+
+.shape-delete:hover {
+    background: #FF0000;
+}
+
+/* ============ INSERTION LINE (clickable to add) ============ */
+.shapes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    z-index: 3;
+}
+
+.insertion-line {
+    height: 32px;
+    width: 4px;
+    background: #555;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    margin: 4px 0;
+}
+
+.insertion-line:hover {
+    background: #4B9DDC;
+    width: 6px;
+}
+
+.insertion-line:hover .insertion-dot {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+.insertion-dot {
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(to bottom, #6BB0E0, #3380C0);
+    border: 2px solid #1F3354;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.15s;
+    position: absolute;
+    z-index: 5;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.95), 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.insertion-dot::after {
+    content: '+';
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+
+/* Branch insertion line - smaller */
+.if-branch .insertion-line {
+    height: 22px;
+}
+
+/* Frecce ai capi del flowchart per dare direzione */
+.shapes-container > .insertion-line:last-child::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #555;
+}
+
+/* ============ STATUS BAR ============ */
+.status-bar {
+    height: 22px;
+    background: linear-gradient(to bottom, #E8E8E8, #D0D0D0);
+    border-top: 1px solid #B0B0B0;
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    color: #333;
+}
+
+.status-section {
+    padding: 0 12px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #B0B0B0;
+}
+
+.flex-grow {
+    flex: 1;
+    justify-content: flex-end;
+    border-right: 1px solid #B0B0B0;
+}
+
+.version-info {
+    font-weight: bold;
+    color: #1F3354;
+    background: linear-gradient(to bottom, #F5F5F5, #E0E0E0);
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    border-right: none;
+}
+
+/* ============ CONTEXT MENU ============ */
+.context-menu {
+    position: fixed;
+    background: #F5F5F5;
+    border: 1px solid #777;
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.4);
+    display: none;
+    z-index: 1000;
+    min-width: 220px;
+    padding: 4px 0;
+}
+
+.context-menu.visible {
+    display: block;
+}
+
+.context-header {
+    font-weight: bold;
+    padding: 4px 10px;
+    color: #1F3354;
+    background: #E0E8F0;
+    border-bottom: 1px solid #CCC;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.context-item {
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.context-item:hover {
+    background: #C9DEF5;
+}
+
+.context-item.disabled {
+    color: #999;
+    cursor: not-allowed;
+}
+
+.context-item.disabled:hover {
+    background: transparent;
+}
+
+.context-separator {
+    height: 1px;
+    background: #CCC;
+    margin: 3px 4px;
+}
+
+/* ============ MODAL DIALOG ============ */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal-overlay.visible {
+    display: flex;
+}
+
+.dialog-window {
+    background: #F0F0F0;
+    border: 1px solid #1F3354;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    min-width: 420px;
+    max-width: 600px;
+}
+
+.dialog-titlebar {
+    height: 26px;
+    background: linear-gradient(to bottom, #5B8DC4, #2F5A8C);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.dialog-close {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    width: 24px;
+    height: 22px;
+}
+
+.dialog-close:hover {
+    background: #E81123;
+}
+
+.dialog-body {
+    padding: 20px;
+    background: #F0F0F0;
+}
+
+.dialog-shape-preview {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.dialog-field {
+    margin-bottom: 12px;
+}
+
+.dialog-field label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: #333;
+    font-weight: 500;
+}
+
+.dialog-field input,
+.dialog-field select,
+.dialog-field textarea {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #999;
+    background: white;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 13px;
+    border-radius: 2px;
+}
+
+.dialog-field input:focus,
+.dialog-field select:focus,
+.dialog-field textarea:focus {
+    outline: none;
+    border-color: #4B9DDC;
+    box-shadow: 0 0 0 2px rgba(75, 157, 220, 0.3);
+}
+
+.dialog-field.row {
+    display: flex;
+    gap: 10px;
+}
+
+.dialog-field.row > div {
+    flex: 1;
+}
+
+.dialog-field-help {
+    font-size: 11px;
+    color: #666;
+    margin-top: 2px;
+    font-style: italic;
+}
+
+.dialog-footer {
+    padding: 10px 16px;
+    background: #E8E8E8;
+    border-top: 1px solid #CCC;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.dialog-btn {
+    padding: 6px 18px;
+    border: 1px solid #999;
+    background: linear-gradient(to bottom, #FAFAFA, #DDD);
+    cursor: pointer;
+    font-size: 12px;
+    font-family: inherit;
+    border-radius: 2px;
+    min-width: 80px;
+}
+
+.dialog-btn:hover {
+    background: linear-gradient(to bottom, #FFFFFF, #C9DEF5);
+    border-color: #5B8DC4;
+}
+
+.dialog-btn.primary {
+    background: linear-gradient(to bottom, #5B8DC4, #2F5A8C);
+    color: white;
+    border-color: #1F3354;
+}
+
+.dialog-btn.primary:hover {
+    background: linear-gradient(to bottom, #6FA0D4, #3F6F9C);
+}
+
+/* About Dialog Styles */
+.about-dialog {
+    max-width: 600px;
+    width: 90%;
+}
+
+.about-body {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #CCC;
+}
+
+.about-header h2 {
+    margin: 0;
+    color: #1F3354;
+    font-size: 24px;
+}
+
+.about-header .version {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.about-info {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #F5F5F5;
+    border-radius: 4px;
+}
+
+.about-info p {
+    margin: 5px 0;
+}
+
+.about-info a {
+    color: #4B9DDC;
+    text-decoration: none;
+}
+
+.about-info a:hover {
+    text-decoration: underline;
+}
+
+.about-description {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.about-license h3 {
+    margin: 0 0 10px;
+    color: #1F3354;
+    font-size: 14px;
+}
+
+.license-text {
+    background: #F5F5F5;
+    padding: 12px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 11px;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    max-height: 200px;
+    overflow-y: auto;
+    margin: 0;
+}
+
+/* ============ FLOATING WINDOWS (Console, Variables, Source) ============ */
+.floating-window {
+    position: fixed;
+    background: #F0F0F0;
+    border: 1px solid #1F3354;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+}
+
+.console-window {
+    bottom: 30px;
+    right: 30px;
+    width: 480px;
+    height: 360px;
+}
+
+.variables-window {
+    bottom: 30px;
+    left: 30px;
+    width: 380px;
+    height: 280px;
+}
+
+.source-window {
+    top: 100px;
+    right: 30px;
+    width: 500px;
+    height: 480px;
+}
+
+.floating-titlebar {
+    height: 26px;
+    background: linear-gradient(to bottom, #5B8DC4, #2F5A8C);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    cursor: move;
+}
+
+.floating-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.floating-controls {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.floating-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    width: 24px;
+    height: 22px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+.floating-btn:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+.lang-select {
+    height: 20px;
+    font-size: 11px;
+    border: 1px solid #999;
+    background: white;
+    border-radius: 2px;
+    padding: 0 4px;
+}
+
+/* Console */
+.console-body {
+    flex: 1;
+    background: #FFFFFF;
+    padding: 8px;
+    overflow-y: auto;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 13px;
+}
+
+.chat-bubble {
+    margin: 6px 0;
+    padding: 8px 12px;
+    border-radius: 12px;
+    max-width: 80%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.chat-bubble.output {
+    background: #B0E0B0;
+    color: #1F5C1F;
+    border: 1px solid #7FCC7F;
+    margin-right: auto;
+    border-bottom-left-radius: 2px;
+}
+
+.chat-bubble.input {
+    background: #B0D8F0;
+    color: #1F3F70;
+    border: 1px solid #5BC9F0;
+    margin-left: auto;
+    text-align: right;
+    border-bottom-right-radius: 2px;
+}
+
+.chat-bubble.error {
+    background: #FFCCCC;
+    color: #8B1A1A;
+    border: 1px solid #D44545;
+    margin: 6px auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.chat-bubble.info {
+    background: #FFF0B0;
+    color: #6B4F00;
+    border: 1px solid #D4B040;
+    margin: 6px auto;
+    text-align: center;
+    font-style: italic;
+}
+
+.console-input-area {
+    display: flex;
+    align-items: center;
+    padding: 6px 8px;
+    background: #E8E8E8;
+    border-top: 1px solid #CCC;
+    gap: 6px;
+}
+
+.console-prompt {
+    color: #1F3354;
+    font-weight: bold;
+}
+
+#consoleInput {
+    flex: 1;
+    padding: 5px 8px;
+    border: 1px solid #999;
+    border-radius: 2px;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 13px;
+}
+
+#consoleSubmit {
+    padding: 4px 14px;
+    background: linear-gradient(to bottom, #5B8DC4, #2F5A8C);
+    color: white;
+    border: 1px solid #1F3354;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 11px;
+}
+
+#consoleSubmit:hover {
+    background: linear-gradient(to bottom, #6FA0D4, #3F6F9C);
+}
+
+/* Variables Window */
+.variables-body {
+    flex: 1;
+    overflow-y: auto;
+    background: white;
+}
+
+.variables-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.variables-table th {
+    background: linear-gradient(to bottom, #E8E8E8, #D0D0D0);
+    padding: 6px 10px;
+    text-align: left;
+    border-bottom: 1px solid #B0B0B0;
+    font-weight: 600;
+    color: #333;
+    font-size: 11px;
+}
+
+.variables-table td {
+    padding: 5px 10px;
+    border-bottom: 1px solid #E8E8E8;
+    font-family: "Consolas", "Courier New", monospace;
+}
+
+.variables-table tr.empty-row td {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    font-family: inherit;
+    padding: 16px;
+}
+
+.var-type-Integer { color: #1F3F8B; font-weight: bold; }
+.var-type-Real { color: #5C2C8B; font-weight: bold; }
+.var-type-String { color: #8B1F2F; font-weight: bold; }
+.var-type-Boolean { color: #1F8B6F; font-weight: bold; }
+
+.var-changed {
+    animation: highlight-var 1s ease-out;
+}
+
+@keyframes highlight-var {
+    0% { background: #FFF59D; }
+    100% { background: transparent; }
+}
+
+/* Source Code Window */
+.source-body {
+    flex: 1;
+    background: #FFFFFF;
+    overflow: auto;
+    padding: 10px;
+}
+
+.source-body pre {
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #000;
+    white-space: pre-wrap;
+}
+
+.src-keyword { color: #0000FF; font-weight: bold; }
+.src-assign { background: rgba(123, 184, 232, 0.3); }
+.src-input { background: rgba(91, 201, 240, 0.3); }
+.src-output { background: rgba(127, 204, 127, 0.3); }
+.src-if { background: rgba(244, 200, 66, 0.3); }
+.src-loop { background: rgba(232, 127, 180, 0.3); }
+.src-call { background: rgba(200, 164, 220, 0.3); }
+.src-declare { background: rgba(192, 192, 192, 0.3); }
+.src-comment { color: #008000; font-style: italic; }
+
+/* ============ ANIMATIONS ============ */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.flow-shape, .shape-if, .shape-loop {
+    animation: fadeIn 0.25s ease-out;
+}
+
+/* ============ LANGUAGE SELECTOR ============ */
+.lang-selector {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 8px;
+    height: 32px;
+    background: linear-gradient(to bottom, #FAFAFA, #E4E4E4);
+    border: 1px solid #999;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.lang-selector:hover {
+    background: linear-gradient(to bottom, #E8F0FB, #C9DEF5);
+    border-color: #5B8DC4;
+}
+
+.lang-dropdown {
+    background: transparent;
+    border: none;
+    font-size: 11px;
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+    padding: 2px 4px;
+    color: #1F3354;
+    font-weight: 600;
+}
+
+.lang-dropdown:hover {
+    background: rgba(75, 157, 220, 0.1);
+}
+
+/* Scrollbars styled */
+::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F0F0F0;
+    border: 1px solid #D0D0D0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #C0C0C0, #A0A0A0);
+    border: 1px solid #888;
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to right, #B0B0B0, #909090);
+}
+
+::-webkit-scrollbar-corner {
+    background: #F0F0F0;
+}
+
+/* ==========================================================
+   FLOWGORITHM ONLINE 1.0.0k FINAL OVERRIDES
+   These rules intentionally override the older experimental
+   flex/table connector styles with a stable Flowgorithm-like
+   drawing model.
+   ========================================================== */
+
+/* Actual flowchart style switching */
+:root.style-classic .flowchart-canvas { background-color: #ffffff; }
+:root.style-ibm .flowchart-canvas { background-color: #f7fbff; }
+:root.style-sdl .flowchart-canvas { background-color: #fffdf6; }
+:root.style-modern .flowchart-canvas { background-color: #f8fafc; }
+:root.style-minimal .flowchart-canvas { background-image: none; background-color: #fff; }
+:root.style-colorful .flowchart-canvas { background-color: #fff7fb; }
+:root.style-dark .flowchart-canvas { background-color: #1f2430; background-image: none; }
+:root.style-dark .function-label { color: #f4f4f4; }
+:root.style-dark .branch-label { background: #1f2430; color: #fff; }
+:root.style-light .flowchart-canvas { background-color: #ffffff; }
+
+:root.style-ibm .shape-assign,
+:root.style-ibm .shape-declare,
+:root.style-ibm .shape-call,
+:root.style-ibm .shape-comment { border-radius: 0; box-shadow: none; }
+:root.style-sdl .shape-terminal { border-radius: 3px; }
+:root.style-minimal .flow-shape,
+:root.style-minimal .diamond-shape,
+:root.style-minimal .hexagon-shape { filter: none !important; box-shadow: none !important; }
+:root.style-colorful .shape-assign { background: #9fd3ff; }
+:root.style-colorful .shape-output .shape-bg { background: #a8f0b4; }
+:root.style-colorful .shape-input .shape-bg { background: #bde3ff; }
+
+/* Main vertical connector and insertion points */
+.insertion-line {
+    height: 46px !important;
+    width: 4px !important;
+    background: #444 !important;
+    margin: 0 !important;
+    z-index: 20 !important;
+    pointer-events: auto !important;
+}
+.insertion-line::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 10px solid #444;
+}
+.insertion-line:hover { width: 6px !important; background: #2f80c0 !important; }
+.insertion-line:hover::after { border-top-color: #2f80c0; }
+.insertion-dot { z-index: 30 !important; pointer-events: none !important; }
+
+.shapes-container > .flow-shape,
+.shape-if,
+.shape-loop { margin: 0 !important; }
+
+/* Flowgorithm-like terminal */
+.shape-terminal {
+    background: #ead9ff !important;
+    border: 2px solid #986aaa !important;
+    color: #190033;
+    width: 290px !important;
+    height: 74px !important;
+    border-radius: 38px !important;
+}
+.shape-terminal .shape-content { font-size: 30px !important; font-weight: 400 !important; }
+
+/* Declare / Assign colors closer to screenshot */
+.shape-declare, .shape-assign {
+    background: #ffffd6 !important;
+    border: 2px solid #9b9b73 !important;
+    min-width: 270px !important;
+    min-height: 72px !important;
+    box-shadow: none !important;
+}
+.shape-declare::before {
+    content: '';
+    position: absolute;
+    left: 16px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #9b9b73;
+}
+.shape-declare::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 18px;
+    right: 0;
+    height: 2px;
+    background: #9b9b73;
+}
+.shape-content { font-size: 28px !important; font-family: "Segoe UI", Arial, sans-serif !important; }
+
+.shape-input, .shape-output { height: 74px !important; min-width: 260px !important; }
+.shape-input .shape-bg { background: #cfe6ff !important; border-color: #6b879e !important; transform: skewX(-26deg) !important; }
+.shape-output .shape-bg { background: #d7ffd7 !important; border-color: #7da47d !important; transform: skewX(-26deg) !important; }
+
+.shape-call {
+    background: #ead9ff !important;
+    border: 2px solid #986aaa !important;
+    min-width: 220px !important;
+    min-height: 72px !important;
+    box-shadow: none !important;
+}
+
+/* If layout matching the screenshot: false left, true right, merge circle */
+.shape-if {
+    width: 560px !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding-bottom: 0 !important;
+}
+.shape-if .diamond-shape {
+    width: 260px !important;
+    height: 145px !important;
+    z-index: 5 !important;
+}
+.shape-if .diamond-shape polygon { fill: #ffd4d4 !important; stroke: #9b7474 !important; }
+.shape-if .diamond-text { font-size: 30px !important; line-height: 1.15 !important; }
+.shape-if .diamond-shape::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: -2px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 2px !important;
+    height: 0 !important;
+    background: transparent !important;
+}
+.shape-if .if-branches {
+    width: 560px !important;
+    min-height: 160px !important;
+    display: flex !important;
+    align-items: stretch !important;
+    justify-content: space-between !important;
+    padding: 0 !important;
+    margin-top: -72px !important;
+    position: relative !important;
+}
+.shape-if .if-branches::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 72px !important;
+    left: 15px !important;
+    right: 15px !important;
+    height: 2px !important;
+    background: #444 !important;
+    z-index: 1 !important;
+}
+.shape-if .if-branches::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 8px !important;
+    left: 15px !important;
+    right: 15px !important;
+    height: 2px !important;
+    background: #444 !important;
+    z-index: 1 !important;
+}
+.shape-if .if-branch {
+    width: 50% !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding-top: 48px !important;
+    z-index: 3 !important;
+}
+.shape-if .if-branch::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 72px !important;
+    bottom: 8px !important;
+    width: 2px !important;
+    background: #444 !important;
+    z-index: 1 !important;
+}
+.shape-if .if-false::before { left: 15px !important; transform: none !important; }
+.shape-if .if-true::before { right: 15px !important; left: auto !important; transform: none !important; }
+.shape-if .branch-label {
+    position: absolute !important;
+    top: 12px !important;
+    background: white !important;
+    color: #222 !important;
+    font-size: 28px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    z-index: 6 !important;
+}
+.shape-if .if-false .branch-label { left: 0 !important; }
+.shape-if .if-true .branch-label { right: 22px !important; }
+.shape-if .if-branch .insertion-line {
+    height: 110px !important;
+    background: transparent !important;
+}
+.shape-if .if-merge-point {
+    width: 38px !important;
+    height: 38px !important;
+    border: 2px solid #9b7474 !important;
+    background: #ffdada !important;
+    border-radius: 50% !important;
+    margin-top: -27px !important;
+    z-index: 7 !important;
+}
+.shape-if .if-merge-point::after { height: 46px !important; top: 36px !important; background: #444 !important; }
+
+/* Loop layout: central false/down path, true path to the right with return arrow */
+.shape-loop {
+    width: 540px !important;
+    min-height: 220px !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding-bottom: 0 !important;
+}
+.shape-loop .hexagon-shape {
+    width: 260px !important;
+    height: 110px !important;
+    z-index: 6 !important;
+}
+.shape-loop .hexagon-shape polygon { fill: #ffdfa8 !important; stroke: #9b7c4f !important; }
+.shape-loop .hex-text { font-size: 30px !important; line-height: 1.15 !important; }
+.loop-classic {
+    position: relative !important;
+    width: 540px !important;
+    min-height: 120px !important;
+    margin-top: -1px !important;
+}
+.loop-false-path {
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 2px !important;
+    bottom: 0 !important;
+    background: #444 !important;
+    z-index: 1 !important;
+}
+.loop-false-path::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 12px solid #444;
+}
+.loop-true-path {
+    position: absolute !important;
+    top: -55px !important;
+    right: 80px !important;
+    width: 115px !important;
+    height: 145px !important;
+    border-top: 4px solid #444 !important;
+    border-right: 4px solid #444 !important;
+    border-bottom: 4px solid #444 !important;
+    z-index: 1 !important;
+}
+.loop-return-arrow {
+    position: absolute !important;
+    top: 78px !important;
+    left: calc(50% + 22px) !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-top: 10px solid transparent !important;
+    border-bottom: 10px solid transparent !important;
+    border-right: 14px solid #444 !important;
+    z-index: 2 !important;
+}
+.loop-body-container {
+    position: relative !important;
+    z-index: 8 !important;
+    margin-left: 245px !important;
+    width: 210px !important;
+    min-height: 100px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+.loop-body-container .insertion-line {
+    height: 95px !important;
+    background: transparent !important;
+}
+.classic-label {
+    position: absolute !important;
+    background: white !important;
+    color: #222 !important;
+    font-size: 28px !important;
+    font-weight: 400 !important;
+    z-index: 9 !important;
+}
+.loop-false-label { top: 12px !important; left: 205px !important; }
+.loop-true-label { top: -62px !important; right: 105px !important; }
+.loop-for .loop-false-label { left: 195px !important; }
+.loop-for .loop-true-label { right: 90px !important; }
+
+/* Break as octagon */
+.shape-breakpoint {
+    width: 70px !important;
+    height: 58px !important;
+    border-radius: 0 !important;
+    clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%) !important;
+    background: #ff9ca2 !important;
+    border: 0 !important;
+}
+.shape-breakpoint .shape-content { display: none !important; }
+
+/* Comment like dotted side annotation */
+.shape-comment {
+    background: white !important;
+    border: 2px dashed #555 !important;
+    box-shadow: none !important;
+    margin-left: 260px !important;
+}
+.shape-comment::before {
+    content: '';
+    position: absolute;
+    left: -90px;
+    top: 50%;
+    width: 90px;
+    border-top: 4px dotted #555;
+}
