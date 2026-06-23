@@ -31,7 +31,9 @@ const i18n = {
         'var.empty': 'Nessuna variabile',
         'status.zoom': 'Zoom', 'status.shapes': 'Forme',
         'flow.start': 'Inizio', 'flow.end': 'Fine', 'flow.true': 'Vero', 'flow.false': 'Falso',
-        'flow.while': 'Mentre', 'flow.do': 'Esegui-Mentre', 'flow.for': 'Per', 'flow.to': 'a',
+        'flow.while': 'Mentre', 'flow.do': 'Esegui', 'flow.for': 'Per', 'flow.to': 'a',
+        'flow.assign': 'Assegna', 'flow.declare': 'Dichiara', 'flow.input': 'Input', 'flow.output': 'Output',
+        'flow.call': 'Chiama', 'flow.if': 'Se', 'flow.next': 'Avanti', 'flow.done': 'Finito', 'flow.break': 'Interrompi',
         'dlg.assign': 'Assegna', 'dlg.declare': 'Dichiara', 'dlg.input': 'Input',
         'dlg.output': 'Output', 'dlg.if': 'Se (If)', 'dlg.while': 'Mentre (While)',
         'dlg.do': 'Esegui-Mentre (Do-While)', 'dlg.for': 'Per (For)',
@@ -47,7 +49,7 @@ const i18n = {
         'msg.invalidFile': 'File non valido o corrotto',
         'msg.speed': 'Velocità', 'msg.lang': 'Lingua corrente',
         'msg.delete': 'Eliminare questa forma?',
-        'msg.about': 'Flowgorithm Online\nVersione BETA 1.0.0k\n\nReplica web dell\'interfaccia di Flowgorithm\nAutore: PiBOH\nhttps://piboh.github.io\n\nLicenza: MIT\n\n© 2024 PiBOH',
+        'msg.about': 'Flowgorithm Online\nVersione BETA 1.0.0q\n\nReplica web dell\'interfaccia di Flowgorithm\nAutore: PiBOH\nhttps://piboh.github.io\n\nMIT License:\n\nCopyright (c) 2026 Pietro Bonaldo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.',
         'msg.colorscheme': 'Schema colori: feature dimostrativa',
         'msg.functions': 'Gestione funzioni: feature dimostrativa',
         'fld.variable': 'Variabile:', 'fld.expression': 'Espressione:',
@@ -90,7 +92,9 @@ const i18n = {
         'var.empty': 'No variables',
         'status.zoom': 'Zoom', 'status.shapes': 'Shapes',
         'flow.start': 'Start', 'flow.end': 'End', 'flow.true': 'True', 'flow.false': 'False',
-        'flow.while': 'While', 'flow.do': 'Do-While', 'flow.for': 'For', 'flow.to': 'to',
+        'flow.while': 'While', 'flow.do': 'Do', 'flow.for': 'For', 'flow.to': 'to',
+        'flow.assign': 'Assign', 'flow.declare': 'Declare', 'flow.input': 'Input', 'flow.output': 'Output',
+        'flow.call': 'Call', 'flow.if': 'If', 'flow.next': 'Next', 'flow.done': 'Done', 'flow.break': 'Break',
         'dlg.assign': 'Assign', 'dlg.declare': 'Declare', 'dlg.input': 'Input',
         'dlg.output': 'Output', 'dlg.if': 'If', 'dlg.while': 'While',
         'dlg.do': 'Do-While', 'dlg.for': 'For',
@@ -106,7 +110,7 @@ const i18n = {
         'msg.invalidFile': 'Invalid file',
         'msg.speed': 'Speed', 'msg.lang': 'Current language',
         'msg.delete': 'Delete this shape?',
-        'msg.about': 'Flowgorithm Online\nVersion BETA 1.0.0k\n\nWeb replica of Flowgorithm\nAuthor: PiBOH\nhttps://piboh.github.io\n\nLicense: MIT\n\n© 2024 PiBOH',
+        'msg.about': 'Flowgorithm Online\nVersion BETA 1.0.0q\n\nWeb replica of Flowgorithm\nAuthor: PiBOH\nhttps://piboh.github.io\n\nMIT License:\n\nCopyright (c) 2026 Pietro Bonaldo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.',
         'msg.colorscheme': 'Color scheme: demo feature',
         'msg.functions': 'Function manager: demo feature',
         'fld.variable': 'Variable:', 'fld.expression': 'Expression:',
@@ -149,7 +153,9 @@ const i18n = {
         'var.empty': 'Sin variables',
         'status.zoom': 'Zoom', 'status.shapes': 'Formas',
         'flow.start': 'Inicio', 'flow.end': 'Fin', 'flow.true': 'Verdadero', 'flow.false': 'Falso',
-        'flow.while': 'Mientras', 'flow.do': 'Hacer-Mientras', 'flow.for': 'Para', 'flow.to': 'hasta',
+        'flow.while': 'Mientras', 'flow.do': 'Hacer', 'flow.for': 'Para', 'flow.to': 'hasta',
+        'flow.assign': 'Asignar', 'flow.declare': 'Declarar', 'flow.input': 'Entrada', 'flow.output': 'Salida',
+        'flow.call': 'Llamar', 'flow.if': 'Si', 'flow.next': 'Siguiente', 'flow.done': 'Hecho', 'flow.break': 'Romper',
         'dlg.assign': 'Asignar', 'dlg.declare': 'Declarar', 'dlg.input': 'Entrada',
         'dlg.output': 'Salida', 'dlg.if': 'Si (If)', 'dlg.while': 'Mientras (While)',
         'dlg.do': 'Hacer-Mientras (Do-While)', 'dlg.for': 'Para (For)',
@@ -165,7 +171,7 @@ const i18n = {
         'msg.invalidFile': 'Archivo inválido',
         'msg.speed': 'Velocidad', 'msg.lang': 'Idioma actual',
         'msg.delete': '¿Eliminar esta forma?',
-        'msg.about': 'Flowgorithm Online\nVersión BETA 1.0.0k\n\nRéplica web de Flowgorithm\nAutor: PiBOH\nhttps://piboh.github.io\n\nLicencia: MIT\n\n© 2024 PiBOH',
+        'msg.about': 'Flowgorithm Online\nVersión BETA 1.0.0q\n\nRéplica web de Flowgorithm\nAutor: PiBOH\nhttps://piboh.github.io\n\nMIT License:\n\nCopyright (c) 2026 Pietro Bonaldo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.',
         'msg.colorscheme': 'Esquema de colores: función de demostración',
         'msg.functions': 'Gestor de funciones: función de demostración',
         'fld.variable': 'Variable:', 'fld.expression': 'Expresión:',
@@ -208,7 +214,9 @@ const i18n = {
         'var.empty': 'Aucune variable',
         'status.zoom': 'Zoom', 'status.shapes': 'Formes',
         'flow.start': 'Début', 'flow.end': 'Fin', 'flow.true': 'Vrai', 'flow.false': 'Faux',
-        'flow.while': 'Tant que', 'flow.do': 'Faire-Tant que', 'flow.for': 'Pour', 'flow.to': 'à',
+        'flow.while': 'Tant que', 'flow.do': 'Faire', 'flow.for': 'Pour', 'flow.to': 'à',
+        'flow.assign': 'Affecter', 'flow.declare': 'Déclarer', 'flow.input': 'Entrée', 'flow.output': 'Sortie',
+        'flow.call': 'Appeler', 'flow.if': 'Si', 'flow.next': 'Suivant', 'flow.done': 'Fini', 'flow.break': 'Rompre',
         'dlg.assign': 'Affecter', 'dlg.declare': 'Déclarer', 'dlg.input': 'Entrée',
         'dlg.output': 'Sortie', 'dlg.if': 'Si (If)', 'dlg.while': 'Tant que (While)',
         'dlg.do': 'Faire-Tant que (Do-While)', 'dlg.for': 'Pour (For)',
@@ -224,7 +232,7 @@ const i18n = {
         'msg.invalidFile': 'Fichier invalide',
         'msg.speed': 'Vitesse', 'msg.lang': 'Langue actuelle',
         'msg.delete': 'Supprimer cette forme ?',
-        'msg.about': 'Flowgorithm Online\nVersion BETA 1.0.0k\n\nRéplique web de Flowgorithm\nAuteur: PiBOH\nhttps://piboh.github.io\n\nLicence: MIT\n\n© 2024 PiBOH',
+        'msg.about': 'Flowgorithm Online\nVersion BETA 1.0.0q\n\nRéplique web de Flowgorithm\nAuteur: PiBOH\nhttps://piboh.github.io\n\nMIT License:\n\nCopyright (c) 2026 Pietro Bonaldo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.',
         'msg.colorscheme': 'Schéma de couleurs : fonction de démonstration',
         'msg.functions': 'Gestionnaire de fonctions : fonction de démonstration',
         'fld.variable': 'Variable :', 'fld.expression': 'Expression :',
@@ -267,7 +275,9 @@ const i18n = {
         'var.empty': 'Keine Variablen',
         'status.zoom': 'Zoom', 'status.shapes': 'Formen',
         'flow.start': 'Start', 'flow.end': 'Ende', 'flow.true': 'Wahr', 'flow.false': 'Falsch',
-        'flow.while': 'Solange', 'flow.do': 'Tun-Solange', 'flow.for': 'Für', 'flow.to': 'bis',
+        'flow.while': 'Solange', 'flow.do': 'Tun', 'flow.for': 'Für', 'flow.to': 'bis',
+        'flow.assign': 'Zuweisen', 'flow.declare': 'Deklarieren', 'flow.input': 'Eingabe', 'flow.output': 'Ausgabe',
+        'flow.call': 'Aufrufen', 'flow.if': 'Wenn', 'flow.next': 'Weiter', 'flow.done': 'Fertig', 'flow.break': 'Abbrechen',
         'dlg.assign': 'Zuweisen', 'dlg.declare': 'Deklarieren', 'dlg.input': 'Eingabe',
         'dlg.output': 'Ausgabe', 'dlg.if': 'Wenn (If)', 'dlg.while': 'Solange (While)',
         'dlg.do': 'Tun-Solange (Do-While)', 'dlg.for': 'Für (For)',
@@ -283,7 +293,7 @@ const i18n = {
         'msg.invalidFile': 'Ungültige Datei',
         'msg.speed': 'Geschwindigkeit', 'msg.lang': 'Aktuelle Sprache',
         'msg.delete': 'Diese Form löschen?',
-        'msg.about': 'Flowgorithm Online\nVersion BETA 1.0.0k\n\nWeb-Replik von Flowgorithm\nAutor: PiBOH\nhttps://piboh.github.io\n\nLizenz: MIT\n\n© 2024 PiBOH',
+        'msg.about': 'Flowgorithm Online\nVersion BETA 1.0.0q\n\nWeb-Replik von Flowgorithm\nAutor: PiBOH\nhttps://piboh.github.io\n\nMIT License:\n\nCopyright (c) 2026 Pietro Bonaldo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.',
         'msg.colorscheme': 'Farbschema: Demo-Funktion',
         'msg.functions': 'Funktionsverwaltung: Demo-Funktion',
         'fld.variable': 'Variable:', 'fld.expression': 'Ausdruck:',
@@ -384,11 +394,13 @@ const state = {
     running: false,
     paused: false,
     stepMode: false,
-    speed: 'medium',
+    speed: 'full',
     awaitingInput: null,
     zoom: 100,
     nextId: 1,
     executionStack: [],
+    undoStack: [],
+    redoStack: [],
 };
 
 // ============ UTILITIES ============
@@ -424,6 +436,8 @@ function createNode(type, props = {}) {
 }
 
 // ============ RENDERING ============
+// Approccio Flowgorithm: ogni blocco è una colonna verticale centrata.
+// I connettori verticali sono linee tra i blocchi, le frecce indicano direzione.
 function render() {
     const container = document.getElementById('shapesContainer');
     container.innerHTML = '';
@@ -434,53 +448,51 @@ function render() {
     }
 }
 
-function renderBlock(container, blockArray, allowInsert = true) {
-    // Linea di inserimento iniziale
-    if (allowInsert) {
-        container.appendChild(createInsertionLine(blockArray, 0));
-    }
-    
+// renderBlock costruisce una sequenza verticale: connettore -> forma -> connettore -> forma ...
+function renderBlock(container, blockArray, isTop = true) {
+    container.classList.add('flow-column');
+
+    // Connettore/inserimento iniziale
+    container.appendChild(createConnector(blockArray, 0, isTop));
+
     blockArray.forEach((node, idx) => {
-        const el = renderNode(node, blockArray, idx);
-        container.appendChild(el);
-        if (allowInsert) {
-            container.appendChild(createInsertionLine(blockArray, idx + 1));
-        }
+        container.appendChild(renderNode(node, blockArray, idx));
+        container.appendChild(createConnector(blockArray, idx + 1, isTop));
     });
 }
 
-function createInsertionLine(parent, index) {
-    const line = document.createElement('div');
-    line.className = 'insertion-line';
-    const dot = document.createElement('div');
-    dot.className = 'insertion-dot';
-    line.appendChild(dot);
-    line.addEventListener('click', (e) => {
+// Connettore verticale con punto di inserimento "+" e freccia
+function createConnector(parent, index, withArrow) {
+    const conn = document.createElement('div');
+    conn.className = 'connector';
+    conn.innerHTML = `
+        <div class="connector-line"></div>
+        <div class="connector-arrow"></div>
+        <div class="insert-dot" title="Aggiungi blocco">+</div>
+    `;
+    conn.querySelector('.insert-dot').addEventListener('click', (e) => {
         e.stopPropagation();
         showShapeMenu(e, parent, index);
     });
-    return line;
+    return conn;
 }
 
 function renderNode(node, parent, index) {
-    const wrapper = document.createElement('div');
-    wrapper.dataset.id = node.id;
-    
     switch (node.type) {
         case 'assign':
-            return renderRectShape(node, parent, index, 'shape-assign', 
-                `${node.variable} ← ${node.expression}`);
+            return renderRectShape(node, parent, index, 'shape-assign',
+                `${t('flow.assign') || 'Assign'} ${node.variable} = ${node.expression}`);
         case 'declare':
-            const declText = node.isArray 
-                ? `${node.name}[${node.size}] : ${node.varType}`
-                : `${node.name} : ${node.varType}`;
-            return renderRectShape(node, parent, index, 'shape-declare', declText);
+            const declText = node.isArray
+                ? `${t('flow.declare') || 'Declare'} ${node.varType} ${node.name}[${node.size}]`
+                : `${t('flow.declare') || 'Declare'} ${node.varType} ${node.name}`;
+            return renderDeclareShape(node, parent, index, declText);
         case 'input':
-            return renderParaShape(node, parent, index, 'shape-input', 
-                `Input ${node.variable}`);
+            return renderParaShape(node, parent, index, 'shape-input',
+                `${t('flow.input') || 'Input'} ${node.variable}`);
         case 'output':
-            return renderParaShape(node, parent, index, 'shape-output', 
-                `Output ${node.expression}`);
+            return renderParaShape(node, parent, index, 'shape-output',
+                `${t('flow.output') || 'Output'} ${node.expression}`);
         case 'if':
             return renderIfShape(node, parent, index);
         case 'while':
@@ -488,13 +500,20 @@ function renderNode(node, parent, index) {
         case 'for':
             return renderLoopShape(node, parent, index);
         case 'call':
-            return renderRectShape(node, parent, index, 'shape-call', node.expression);
+            return renderCallShape(node, parent, index,
+                `${t('flow.call') || 'Call'} ${node.expression}`);
         case 'comment':
-            return renderRectShape(node, parent, index, 'shape-comment', node.text);
+            return renderCommentShape(node, parent, index, node.text);
         case 'breakpoint':
             return renderBreakpoint(node, parent, index);
     }
-    return wrapper;
+    return document.createElement('div');
+}
+
+function attachShapeEvents(el, node, parent, index) {
+    el.addEventListener('dblclick', (e) => { e.stopPropagation(); openEditDialog(node); });
+    const del = el.querySelector('.shape-delete');
+    if (del) del.addEventListener('click', (e) => { e.stopPropagation(); deleteNode(parent, index); });
 }
 
 function renderRectShape(node, parent, index, cssClass, text) {
@@ -502,14 +521,43 @@ function renderRectShape(node, parent, index, cssClass, text) {
     div.className = `flow-shape ${cssClass}`;
     div.dataset.id = node.id;
     div.innerHTML = `<div class="shape-content">${escapeHtml(text)}</div><button class="shape-delete" title="Elimina">✕</button>`;
-    div.addEventListener('dblclick', (e) => {
-        e.stopPropagation();
-        openEditDialog(node);
-    });
-    div.querySelector('.shape-delete').addEventListener('click', (e) => {
-        e.stopPropagation();
-        deleteNode(parent, index);
-    });
+    attachShapeEvents(div, node, parent, index);
+    return div;
+}
+
+// Declare ha la "linguetta" in alto come in Flowgorithm
+function renderDeclareShape(node, parent, index, text) {
+    const div = document.createElement('div');
+    div.className = `flow-shape shape-declare`;
+    div.dataset.id = node.id;
+    div.innerHTML = `
+        <div class="declare-tab"></div>
+        <div class="shape-content">${escapeHtml(text)}</div>
+        <button class="shape-delete" title="Elimina">✕</button>`;
+    attachShapeEvents(div, node, parent, index);
+    return div;
+}
+
+// Call ha le doppie barre laterali
+function renderCallShape(node, parent, index, text) {
+    const div = document.createElement('div');
+    div.className = `flow-shape shape-call`;
+    div.dataset.id = node.id;
+    div.innerHTML = `<div class="shape-content">${escapeHtml(text)}</div><button class="shape-delete" title="Elimina">✕</button>`;
+    attachShapeEvents(div, node, parent, index);
+    return div;
+}
+
+// Comment: rettangolo tratteggiato collegato con linea punteggiata, posto a lato
+function renderCommentShape(node, parent, index, text) {
+    const div = document.createElement('div');
+    div.className = `flow-shape shape-comment`;
+    div.dataset.id = node.id;
+    div.innerHTML = `
+        <div class="comment-dots"></div>
+        <div class="comment-box"><div class="shape-content">${escapeHtml(text)}</div></div>
+        <button class="shape-delete" title="Elimina">✕</button>`;
+    attachShapeEvents(div, node, parent, index);
     return div;
 }
 
@@ -518,129 +566,130 @@ function renderParaShape(node, parent, index, cssClass, text) {
     div.className = `flow-shape ${cssClass}`;
     div.dataset.id = node.id;
     div.innerHTML = `<div class="shape-bg"></div><div class="shape-content">${escapeHtml(text)}</div><button class="shape-delete" title="Elimina">✕</button>`;
-    div.addEventListener('dblclick', (e) => {
-        e.stopPropagation();
-        openEditDialog(node);
-    });
-    div.querySelector('.shape-delete').addEventListener('click', (e) => {
-        e.stopPropagation();
-        deleteNode(parent, index);
-    });
+    attachShapeEvents(div, node, parent, index);
     return div;
 }
 
+// ============ IF SHAPE ============
+// Struttura come Flowgorithm: diamante con etichette False(sx)/True(dx) sopra,
+// i due rami scendono in parallelo, poi si ricongiungono in un cerchio (merge).
 function renderIfShape(node, parent, index) {
     const wrap = document.createElement('div');
     wrap.className = 'shape-if';
     wrap.dataset.id = node.id;
-    
-    // Diamond rosa (come Flowgorithm)
-    const diamond = document.createElement('div');
-    diamond.className = 'diamond-shape';
-    diamond.innerHTML = `
-        <svg viewBox="0 0 240 80" preserveAspectRatio="none">
-            <polygon points="120,2 238,40 120,78 2,40" fill="#F4A3C8" stroke="#7A2954" stroke-width="2"/>
-        </svg>
-        <div class="diamond-text">${escapeHtml(node.condition)}</div>
-        <button class="shape-delete">✕</button>
+
+    // Riga del diamante: 3 colonne [False-label] [diamond] [True-label]
+    const diamondRow = document.createElement('div');
+    diamondRow.className = 'if-diamond-row';
+    diamondRow.innerHTML = `
+        <span class="if-edge-label if-false-edge">${escapeHtml(t('flow.false'))}</span>
+        <div class="diamond-shape">
+            <svg viewBox="0 0 200 78" preserveAspectRatio="none">
+                <polygon points="100,3 197,39 100,75 3,39" class="diamond-fill" stroke="#7A2954" stroke-width="2"/>
+            </svg>
+            <div class="diamond-text">${escapeHtml((t('flow.if')||'If') + '\\n' + node.condition).replace(/\\n/g,'<br>')}</div>
+            <button class="shape-delete">✕</button>
+        </div>
+        <span class="if-edge-label if-true-edge">${escapeHtml(t('flow.true'))}</span>
     `;
-    diamond.addEventListener('dblclick', (e) => {
-        e.stopPropagation();
-        openEditDialog(node);
-    });
-    diamond.querySelector('.shape-delete').addEventListener('click', (e) => {
-        e.stopPropagation();
-        deleteNode(parent, index);
-    });
-    wrap.appendChild(diamond);
-    
-    // Contenitore rami con linee orizzontali
+    const diamond = diamondRow.querySelector('.diamond-shape');
+    attachShapeEvents(diamond, node, parent, index);
+    wrap.appendChild(diamondRow);
+
+    // Rami: False a sinistra, True a destra
     const branches = document.createElement('div');
     branches.className = 'if-branches';
-    
-    // False branch (sinistra)
+
     const falseBranch = document.createElement('div');
     falseBranch.className = 'if-branch if-false';
-    const falseLabel = document.createElement('div');
-    falseLabel.className = 'branch-label false-label';
-    falseLabel.textContent = 'False';
-    falseBranch.appendChild(falseLabel);
-    renderBlock(falseBranch, node.falseBranch);
-    
-    // True branch (destra)
+    renderBlock(falseBranch, node.falseBranch, false);
+
     const trueBranch = document.createElement('div');
     trueBranch.className = 'if-branch if-true';
-    const trueLabel = document.createElement('div');
-    trueLabel.className = 'branch-label true-label';
-    trueLabel.textContent = 'True';
-    trueBranch.appendChild(trueLabel);
-    renderBlock(trueBranch, node.trueBranch);
-    
+    renderBlock(trueBranch, node.trueBranch, false);
+
     branches.appendChild(falseBranch);
     branches.appendChild(trueBranch);
     wrap.appendChild(branches);
-    
-    // Merge point (cerchio bianco)
+
+    // Merge row: linea orizzontale + cerchio
+    const mergeRow = document.createElement('div');
+    mergeRow.className = 'if-merge-row';
     const mergePoint = document.createElement('div');
     mergePoint.className = 'if-merge-point';
-    wrap.appendChild(mergePoint);
-    
+    mergeRow.appendChild(mergePoint);
+    wrap.appendChild(mergeRow);
+
+    // Linea in uscita verso il basso (continuità dopo il merge)
+    const exitLine = document.createElement('div');
+    exitLine.className = 'if-exit-line';
+    wrap.appendChild(exitLine);
+
     return wrap;
 }
 
+// ============ LOOP SHAPE (While / For / Do) ============
+// Struttura come Flowgorithm: esagono con il corpo che esce a destra,
+// freccia di ritorno che rientra nell'esagono, ramo "falso/done" che scende.
 function renderLoopShape(node, parent, index) {
     const wrap = document.createElement('div');
     wrap.className = 'shape-loop';
+    if (node.type === 'do') wrap.classList.add('loop-do');
     wrap.dataset.id = node.id;
-    
-    // Costruisco il testo basato sul tipo di loop
-    let text = '';
-    switch (node.type) {
-        case 'while':
-            text = t('flow.while') + ' ' + node.condition;
-            break;
-        case 'do':
-            text = t('flow.do') + ' ' + node.condition;
-            break;
-        case 'for':
-            text = t('flow.for') + ' ' + node.variable + ' = ' + node.start + ' ' + t('flow.to') + ' ' + node.end + ' (' + node.step + ')';
-            break;
+
+    // Testo ed etichette in base al tipo
+    let text = '', loopLabel = '', exitLabel = '';
+    if (node.type === 'while') {
+        text = (t('flow.while')||'While') + '<br>' + node.condition;
+        loopLabel = t('flow.true') || 'True';
+        exitLabel = t('flow.false') || 'False';
+    } else if (node.type === 'for') {
+        text = (t('flow.for')||'For') + '<br>' + node.variable + ' = ' + node.start + ' ' + (t('flow.to')||'to') + ' ' + node.end;
+        loopLabel = t('flow.next') || 'Next';
+        exitLabel = t('flow.done') || 'Done';
+    } else { // do
+        text = (t('flow.do')||'Do') + '<br>' + node.condition;
+        loopLabel = t('flow.true') || 'True';
+        exitLabel = t('flow.false') || 'False';
     }
-    
-    const hexEl = document.createElement('div');
-    hexEl.className = 'hexagon-shape';
-    hexEl.dataset.loopType = node.type;
-    hexEl.innerHTML = `
-        <svg viewBox="0 0 240 70" preserveAspectRatio="none">
-            <polygon points="36,2 204,2 238,35 204,68 36,68 2,35" fill="#F6D7A6" stroke="#8A6F49" stroke-width="2"/>
-        </svg>
-        <div class="hex-text" data-loop-label="${node.type}">${escapeHtml(text)}</div>
-        <button class="shape-delete">✕</button>
+
+    // Riga principale
+    const mainRow = document.createElement('div');
+    mainRow.className = 'loop-main-row';
+
+    // Esagono
+    const hexCol = document.createElement('div');
+    hexCol.className = 'loop-hex-col';
+    hexCol.innerHTML = `
+        <div class="hexagon-shape">
+            <svg viewBox="0 0 200 56" preserveAspectRatio="none">
+                <polygon points="28,3 172,3 197,28 172,53 28,53 3,28" class="hexagon-fill" stroke="#A86A1F" stroke-width="2"/>
+            </svg>
+            <div class="hex-text">${text}</div>
+            <span class="loop-label-loop">${escapeHtml(loopLabel)}</span>
+            <span class="loop-label-exit">${escapeHtml(exitLabel)}</span>
+            <button class="shape-delete">✕</button>
+        </div>
     `;
-    hexEl.addEventListener('dblclick', (e) => {
-        e.stopPropagation();
-        openEditDialog(node);
-    });
-    hexEl.querySelector('.shape-delete').addEventListener('click', (e) => {
-        e.stopPropagation();
-        deleteNode(parent, index);
-    });
-    wrap.appendChild(hexEl);
-    
-    const classic = document.createElement('div');
-    classic.className = `loop-classic loop-${node.type}`;
-    classic.innerHTML = `
-        <div class="loop-false-label classic-label">${node.type === 'for' ? 'Done' : t('flow.false')}</div>
-        <div class="loop-true-label classic-label">${node.type === 'for' ? 'Next' : t('flow.true')}</div>
-        <div class="loop-false-path"></div>
-        <div class="loop-true-path"></div>
-        <div class="loop-return-arrow"></div>
-    `;
+    const hexEl = hexCol.querySelector('.hexagon-shape');
+    attachShapeEvents(hexEl, node, parent, index);
+
+    // Colonna corpo
+    const bodyCol = document.createElement('div');
+    bodyCol.className = 'loop-body-col';
     const bodyContainer = document.createElement('div');
     bodyContainer.className = 'loop-body-container';
-    renderBlock(bodyContainer, node.body);
-    classic.appendChild(bodyContainer);
-    wrap.appendChild(classic);
+    renderBlock(bodyContainer, node.body, false);
+    bodyCol.appendChild(bodyContainer);
+
+    if (node.type === 'do') {
+        mainRow.appendChild(bodyCol);
+        mainRow.appendChild(hexCol);
+    } else {
+        mainRow.appendChild(hexCol);
+        mainRow.appendChild(bodyCol);
+    }
+    wrap.appendChild(mainRow);
     return wrap;
 }
 
@@ -648,23 +697,22 @@ function renderBreakpoint(node, parent, index) {
     const div = document.createElement('div');
     div.className = 'flow-shape shape-breakpoint';
     div.dataset.id = node.id;
-    div.innerHTML = `<div class="shape-content">●</div><button class="shape-delete">✕</button>`;
-    div.addEventListener('dblclick', (e) => {
-        e.stopPropagation();
-        openEditDialog(node);
-    });
-    div.querySelector('.shape-delete').addEventListener('click', (e) => {
-        e.stopPropagation();
-        deleteNode(parent, index);
-    });
+    div.innerHTML = `
+        <svg viewBox="0 0 40 40" width="40" height="40">
+            <polygon points="12,2 28,2 38,12 38,28 28,38 12,38 2,28 2,12" fill="#F08585" stroke="#B82020" stroke-width="2"/>
+        </svg>
+        <span class="break-label">${escapeHtml(t('flow.break')||'Break')}</span>
+        <button class="shape-delete">✕</button>`;
+    attachShapeEvents(div, node, parent, index);
     return div;
 }
 
 function deleteNode(parent, index) {
-    if (confirm(t('msg.delete'))) {
+    confirmModal(t('msg.delete'), () => {
+        pushUndo();
         parent.splice(index, 1);
         render();
-    }
+    });
 }
 
 function updateStatus() {
@@ -706,6 +754,7 @@ document.querySelectorAll('#shapeMenu .context-item').forEach(item => {
         if (item.classList.contains('disabled')) return;
         const shape = item.dataset.shape;
         if (!state.insertionTarget) return;
+        pushUndo();
         const node = createNode(shape);
         state.insertionTarget.parent.splice(state.insertionTarget.index, 0, node);
         hideShapeMenu();
@@ -895,6 +944,7 @@ function openEditDialog(node) {
 
 function saveDialog() {
     if (!state.editingShape) return;
+    pushUndo();
     const node = state.editingShape;
     const get = id => document.getElementById(id) ? document.getElementById(id).value : '';
     const getCb = id => document.getElementById(id) ? document.getElementById(id).checked : false;
@@ -957,6 +1007,7 @@ document.getElementById('dialogCancel').addEventListener('click', closeDialog);
 function showAbout() {
     const aboutWin = document.getElementById('aboutWindow');
     aboutWin.style.display = 'flex';
+    refreshLicenseFromGitHub();
 }
 
 function closeAbout() {
@@ -965,6 +1016,44 @@ function closeAbout() {
 
 document.getElementById('aboutClose').addEventListener('click', closeAbout);
 document.getElementById('aboutOk').addEventListener('click', closeAbout);
+
+const LICENSE_RAW_URL = 'https://raw.githubusercontent.com/PiBOH/flowgorithmonline/main/LICENSE.md';
+const LICENSE_GITHUB_URL = 'https://github.com/PiBOH/flowgorithmonline/blob/main/LICENSE.md';
+
+async function refreshLicenseFromGitHub() {
+    const licenseEl = document.getElementById('licenseText');
+    const linkEl = document.getElementById('licenseGithubLink');
+    if (linkEl) linkEl.href = LICENSE_GITHUB_URL;
+    if (!licenseEl) return;
+    try {
+        licenseEl.textContent = 'Caricamento licenza dal repository GitHub...';
+        const res = await fetch(LICENSE_RAW_URL, { cache: 'no-store' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        licenseEl.textContent = await res.text();
+    } catch (err) {
+        licenseEl.textContent = `MIT License
+
+Copyright (c) 2026 Pietro Bonaldo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the Software), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, andor sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED AS IS, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.`;
+    }
+}
 
 // ============ MODAL WINDOWS ============
 function showModalWindow(title, content) {
@@ -1007,93 +1096,189 @@ function showModalWindow(title, content) {
     });
 }
 
-function showColorSchemeWindow() {
-    const styles = [
-        'Classic', 'IBM', 'SDL', 'Modern', 'Minimal', 'Colorful',
-        'Dark', 'Light', 'High Contrast', 'Pastel'
-    ];
-    
-    let html = '<p>Seleziona lo stile del flowchart:</p><div style="margin-top:10px;">';
-    styles.forEach((s, i) => {
-        html += `<label style="display:block; margin:6px 0;"><input type="radio" name="style" value="${s}" ${i===0?'checked':''}> ${s}</label>`;
-    });
-    html += '</div>';
-    
+// ============ FINESTRA NOTIFICA (sostituisce alert) ============
+function notify(message, title) {
     const overlay = document.createElement('div');
     overlay.className = 'modal-overlay';
     overlay.style.display = 'flex';
-    
+    overlay.innerHTML = `
+        <div class="dialog-window" style="min-width:360px; max-width:480px;">
+            <div class="dialog-titlebar">
+                <span>${escapeHtml(title || 'Flowgorithm Online')}</span>
+                <button class="dialog-close">✕</button>
+            </div>
+            <div class="dialog-body">
+                <p style="white-space:pre-wrap; line-height:1.5;">${escapeHtml(message)}</p>
+            </div>
+            <div class="dialog-footer">
+                <button class="dialog-btn primary">OK</button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+    function close() { overlay.remove(); }
+    overlay.querySelector('.dialog-close').addEventListener('click', close);
+    overlay.querySelector('.dialog-btn.primary').addEventListener('click', close);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+    // Focus sul bottone OK
+    setTimeout(() => overlay.querySelector('.dialog-btn.primary').focus(), 50);
+}
+
+// ============ FINESTRA CONFERMA (sostituisce confirm) ============
+function confirmModal(message, onConfirm, title) {
+    const overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.style.display = 'flex';
+    overlay.innerHTML = `
+        <div class="dialog-window" style="min-width:360px; max-width:480px;">
+            <div class="dialog-titlebar">
+                <span>${escapeHtml(title || 'Conferma')}</span>
+                <button class="dialog-close">✕</button>
+            </div>
+            <div class="dialog-body">
+                <p style="white-space:pre-wrap; line-height:1.5;">${escapeHtml(message)}</p>
+            </div>
+            <div class="dialog-footer">
+                <button class="dialog-btn primary">${escapeHtml(t('dlg.ok') || 'OK')}</button>
+                <button class="dialog-btn">${escapeHtml(t('dlg.cancel') || 'Annulla')}</button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+    function close() { overlay.remove(); }
+    overlay.querySelector('.dialog-close').addEventListener('click', close);
+    overlay.querySelector('.dialog-btn.primary').addEventListener('click', () => {
+        close();
+        if (typeof onConfirm === 'function') onConfirm();
+    });
+    overlay.querySelector('.dialog-footer .dialog-btn:not(.primary)').addEventListener('click', close);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+}
+
+// ============ UNDO / REDO ============
+function pushUndo() {
+    // Salva uno snapshot profondo del programma corrente
+    state.undoStack.push(JSON.stringify(state.program));
+    if (state.undoStack.length > 100) state.undoStack.shift();
+    state.redoStack = []; // ogni nuova azione cancella la redo
+    updateUndoButtons();
+}
+
+function undo() {
+    if (state.undoStack.length === 0) {
+        notify(t('msg.nothingUndo') || 'Niente da annullare.');
+        return;
+    }
+    state.redoStack.push(JSON.stringify(state.program));
+    const prev = state.undoStack.pop();
+    state.program = JSON.parse(prev);
+    render();
+    updateUndoButtons();
+}
+
+function redo() {
+    if (state.redoStack.length === 0) {
+        notify(t('msg.nothingRedo') || 'Niente da ripetere.');
+        return;
+    }
+    state.undoStack.push(JSON.stringify(state.program));
+    const next = state.redoStack.pop();
+    state.program = JSON.parse(next);
+    render();
+    updateUndoButtons();
+}
+
+function updateUndoButtons() {
+    const undoBtn = document.querySelector('[data-tool="undo"]');
+    const redoBtn = document.querySelector('[data-tool="redo"]');
+    if (undoBtn) undoBtn.style.opacity = state.undoStack.length ? '1' : '0.4';
+    if (redoBtn) redoBtn.style.opacity = state.redoStack.length ? '1' : '0.4';
+}
+
+// Schemi colore: ognuno definisce lo sfondo del canvas e i colori delle forme
+const COLOR_SCHEMES = {
+    'Classic': { canvas: '#FFFFFF', terminal: '#C0A0DC', io: '#9FCDEE', io2: '#9FDB9F', process: '#F2E98A', decision: '#F4A3C8', loop: '#F2B36B', call: '#C9ABE2' },
+    'Cyberspace': { canvas: '#0E1B2A', terminal: '#2E7D9A', io: '#1E5F8A', io2: '#1E8A5F', process: '#8A7A1E', decision: '#8A3A6A', loop: '#8A5A1E', call: '#5A3A8A', dark: true },
+    'Ocean': { canvas: '#E8F4FA', terminal: '#7FB8D8', io: '#5FA8E8', io2: '#5FD8C8', process: '#A8D8E8', decision: '#E89FB8', loop: '#E8C87F', call: '#9FB8E8' },
+    'Sunset': { canvas: '#FFF4E8', terminal: '#E89F7F', io: '#F8C87F', io2: '#E8D87F', process: '#F8E8A8', decision: '#F89F9F', loop: '#F8B87F', call: '#D89FE8' },
+    'Forest': { canvas: '#F0F8E8', terminal: '#9FC87F', io: '#7FC8E8', io2: '#9FD89F', process: '#E8E89F', decision: '#E8B89F', loop: '#D8C87F', call: '#B89FD8' },
+    'Grayscale': { canvas: '#FFFFFF', terminal: '#C8C8C8', io: '#D8D8D8', io2: '#C0C0C0', process: '#E0E0E0', decision: '#B8B8B8', loop: '#D0D0D0', call: '#CCCCCC' },
+    'Dark': { canvas: '#1E1E2A', terminal: '#5A4A7A', io: '#3A5A8A', io2: '#3A7A5A', process: '#7A7A3A', decision: '#8A3A5A', loop: '#8A6A3A', call: '#5A3A7A', dark: true },
+    'Pastel': { canvas: '#FBFBFF', terminal: '#D8C0EC', io: '#C5E4F7', io2: '#C5EEC5', process: '#FBF6C8', decision: '#F4A3C8', loop: '#F2D0A0', call: '#E0CCF0' },
+    'High Contrast': { canvas: '#FFFFFF', terminal: '#9000C0', io: '#0060E0', io2: '#00A040', process: '#E0C000', decision: '#E00080', loop: '#E07000', call: '#7000E0' },
+    'Neon': { canvas: '#101018', terminal: '#C040FF', io: '#40A0FF', io2: '#40FFA0', process: '#FFE040', decision: '#FF40A0', loop: '#FF8040', call: '#A040FF', dark: true }
+};
+
+function applyColorScheme(name) {
+    const s = COLOR_SCHEMES[name] || COLOR_SCHEMES['Classic'];
+    state.colorScheme = name;
+    const root = document.documentElement;
+    root.style.setProperty('--cs-canvas', s.canvas);
+    root.style.setProperty('--cs-terminal', s.terminal);
+    root.style.setProperty('--cs-io', s.io);
+    root.style.setProperty('--cs-io2', s.io2);
+    root.style.setProperty('--cs-process', s.process);
+    root.style.setProperty('--cs-decision', s.decision);
+    root.style.setProperty('--cs-loop', s.loop);
+    root.style.setProperty('--cs-call', s.call);
+    root.style.setProperty('--cs-text', s.dark ? '#F0F0F0' : '#000000');
+    document.body.classList.toggle('scheme-dark', !!s.dark);
+    try { localStorage.setItem('flowgorithm_scheme', name); } catch(e) {}
+    render();
+}
+
+function showColorSchemeWindow() {
+    const names = Object.keys(COLOR_SCHEMES);
+    let html = '<p>Seleziona lo stile del flowchart:</p><div style="margin-top:10px; max-height:260px; overflow-y:auto;">';
+    names.forEach((s) => {
+        const checked = (state.colorScheme || 'Classic') === s ? 'checked' : '';
+        const sc = COLOR_SCHEMES[s];
+        html += `<label style="display:flex; align-items:center; gap:8px; margin:6px 0; cursor:pointer;">
+            <input type="radio" name="scheme" value="${s}" ${checked}>
+            <span style="display:inline-flex; gap:2px;">
+                <span style="width:14px;height:14px;border:1px solid #888;background:${sc.terminal}"></span>
+                <span style="width:14px;height:14px;border:1px solid #888;background:${sc.process}"></span>
+                <span style="width:14px;height:14px;border:1px solid #888;background:${sc.decision}"></span>
+                <span style="width:14px;height:14px;border:1px solid #888;background:${sc.loop}"></span>
+            </span>
+            <span>${s}</span>
+        </label>`;
+    });
+    html += '</div>';
+
+    const overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.style.display = 'flex';
     overlay.innerHTML = `
         <div class="dialog-window">
             <div class="dialog-titlebar">
                 <span>Stile Flowchart</span>
                 <button class="dialog-close">✕</button>
             </div>
-            <div class="dialog-body">
-                ${html}
-            </div>
+            <div class="dialog-body">${html}</div>
             <div class="dialog-footer">
                 <button class="dialog-btn primary">OK</button>
                 <button class="dialog-btn">Annulla</button>
             </div>
-        </div>
-    `;
-    
+        </div>`;
     document.body.appendChild(overlay);
-    
-    const closeBtn = overlay.querySelector('.dialog-close');
-    const okBtn = overlay.querySelector('.dialog-btn.primary');
-    const cancelBtn = overlay.querySelectorAll('.dialog-btn')[1];
-    
+
     function close() { overlay.remove(); }
-    
-    closeBtn.addEventListener('click', close);
-    cancelBtn.addEventListener('click', close);
-    okBtn.addEventListener('click', close);
+    overlay.querySelector('.dialog-close').addEventListener('click', close);
+    overlay.querySelectorAll('.dialog-btn')[1].addEventListener('click', close);
+    // Anteprima live al cambio
+    overlay.querySelectorAll('input[name="scheme"]').forEach(r => {
+        r.addEventListener('change', () => applyColorScheme(r.value));
+    });
+    overlay.querySelector('.dialog-btn.primary').addEventListener('click', () => {
+        const sel = overlay.querySelector('input[name="scheme"]:checked');
+        if (sel) applyColorScheme(sel.value);
+        close();
+    });
 }
 
 function showFlowchartStyleWindow() {
-    // Implementazione reale del cambio stile (cambio classe CSS sulla root)
-    const overlay = document.createElement('div');
-    overlay.className = 'modal-overlay';
-    overlay.style.display = 'flex';
-    
-    let options = '';
-    ['Classic', 'IBM', 'SDL', 'Modern', 'Minimal', 'Colorful', 'Dark', 'Light'].forEach(s => {
-        options += `<option value="${s.toLowerCase()}">${s}</option>`;
-    });
-    
-    overlay.innerHTML = `
-        <div class="dialog-window">
-            <div class="dialog-titlebar">
-                <span>Stile Flowchart</span>
-                <button class="dialog-close">✕</button>
-            </div>
-            <div class="dialog-body">
-                <p>Seleziona lo stile:</p>
-                <select id="styleSelector" style="width:100%; padding:8px;">${options}</select>
-            </div>
-            <div class="dialog-footer">
-                <button class="dialog-btn primary" id="applyStyle">Applica</button>
-                <button class="dialog-btn" id="cancelStyle">Annulla</button>
-            </div>
-        </div>
-    `;
-    document.body.appendChild(overlay);
-    
-    overlay.querySelector('.dialog-close').addEventListener('click', () => overlay.remove());
-    overlay.querySelector('#cancelStyle').addEventListener('click', () => overlay.remove());
-    overlay.querySelector('#applyStyle').addEventListener('click', () => {
-        const style = document.getElementById('styleSelector').value;
-        document.documentElement.className = document.documentElement.className
-            .split(' ')
-            .filter(c => !c.startsWith('style-'))
-            .join(' ');
-        document.documentElement.classList.add('style-' + style);
-        state.flowchartStyle = style;
-        try { localStorage.setItem('flowgorithm_style', style); } catch(e) {}
-        overlay.remove();
-    });
+    showColorSchemeWindow();
 }
 
 function showLanguageWindow() {
@@ -1181,85 +1366,172 @@ function showLayoutWindows() {
 }
 
 function showExportImageWindow() {
-    showModalWindow('Esporta Immagine', `
-        <p>Esporta il flowchart come immagine PNG.</p>
-        <div class="dialog-field" style="margin-top:15px;">
-            <label>Qualità:</label>
-            <select style="width:100%; padding:6px; margin-top:4px;">
-                <option>Alta (300 DPI)</option>
-                <option>Media (150 DPI)</option>
-                <option>Bassa (72 DPI)</option>
-            </select>
-        </div>
-        <div class="dialog-field">
-            <label><input type="checkbox" checked> Includi sfondo bianco</label>
-        </div>
-        <button class="dialog-btn primary" onclick="exportFlowchartAsImage()">Salva Immagine</button>
-    `);
+    const overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.style.display = 'flex';
+    overlay.innerHTML = `
+        <div class="dialog-window">
+            <div class="dialog-titlebar">
+                <span>Esporta Immagine</span>
+                <button class="dialog-close">✕</button>
+            </div>
+            <div class="dialog-body">
+                <p>Esporta il flowchart corrente come immagine PNG.</p>
+                <div class="dialog-field" style="margin-top:15px;">
+                    <label>Risoluzione (scala):</label>
+                    <select id="exp-scale" style="width:100%; padding:6px; margin-top:4px;">
+                        <option value="2">Alta (2x)</option>
+                        <option value="1" selected>Normale (1x)</option>
+                        <option value="3">Molto Alta (3x)</option>
+                    </select>
+                </div>
+                <div class="dialog-field">
+                    <label><input type="checkbox" id="exp-bg" checked> Includi sfondo</label>
+                </div>
+            </div>
+            <div class="dialog-footer">
+                <button class="dialog-btn primary">Esporta PNG</button>
+                <button class="dialog-btn">Annulla</button>
+            </div>
+        </div>`;
+    document.body.appendChild(overlay);
+    function close() { overlay.remove(); }
+    overlay.querySelector('.dialog-close').addEventListener('click', close);
+    overlay.querySelectorAll('.dialog-btn')[1].addEventListener('click', close);
+    overlay.querySelector('.dialog-btn.primary').addEventListener('click', () => {
+        const scale = parseFloat(overlay.querySelector('#exp-scale').value) || 1;
+        const withBg = overlay.querySelector('#exp-bg').checked;
+        close();
+        exportFlowchartPNG(scale, withBg);
+    });
 }
 
-function exportFlowchartAsImage() {
-    const source = document.getElementById('flowchartContent');
-    if (!source) return;
+// Esporta il flowchart come PNG usando SVG + foreignObject -> canvas
+function exportFlowchartPNG(scale, withBg) {
+    const content = document.getElementById('flowchartContent');
+    if (!content) { notify('Nessun flowchart da esportare.'); return; }
 
-    const clone = source.cloneNode(true);
-    clone.querySelectorAll('.shape-delete').forEach(el => el.remove());
-    clone.querySelectorAll('.insertion-dot').forEach(el => { el.style.opacity = '0'; });
+    const rect = content.getBoundingClientRect();
+    const w = Math.ceil(rect.width) + 40;
+    const h = Math.ceil(rect.height) + 40;
 
-    const width = Math.max(900, source.scrollWidth + 80);
-    const height = Math.max(1200, source.scrollHeight + 80);
-    const html = `
-        <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">
-            <foreignObject width="100%" height="100%">
-                <div xmlns="http://www.w3.org/1999/xhtml" style="background:white;width:${width}px;min-height:${height}px;padding:40px;font-family:Segoe UI,Arial,sans-serif;">
-                    ${clone.outerHTML}
-                </div>
-            </foreignObject>
-        </svg>`;
+    // Clona il contenuto e rimuove gli elementi interattivi (+, ✕)
+    const clone = content.cloneNode(true);
+    clone.querySelectorAll('.insert-dot, .shape-delete, .connector-arrow').forEach(el => {
+        if (el.classList.contains('connector-arrow')) return; // tieni le frecce
+        el.remove();
+    });
+    clone.style.transform = 'none';
 
-    const svgBlob = new Blob([html], { type: 'image/svg+xml;charset=utf-8' });
+    // Raccoglie gli stili CSS della pagina (inline non disponibili, usiamo il foglio)
+    let cssText = '';
+    try {
+        for (const sheet of document.styleSheets) {
+            try {
+                for (const rule of sheet.cssRules) cssText += rule.cssText + '\n';
+            } catch (e) { /* CORS */ }
+        }
+    } catch (e) {}
+
+    const bg = withBg ? (getComputedStyle(document.querySelector('.flowchart-canvas')).backgroundColor || '#FFFFFF') : 'transparent';
+
+    const xml = new XMLSerializer().serializeToString(clone);
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}">
+        <foreignObject width="100%" height="100%">
+            <div xmlns="http://www.w3.org/1999/xhtml" style="width:${w}px;height:${h}px;background:${bg};padding:20px;box-sizing:border-box;display:flex;justify-content:center;">
+                <style>${cssText}</style>
+                ${xml}
+            </div>
+        </foreignObject>
+    </svg>`;
+
+    const svgBlob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });
     const url = URL.createObjectURL(svgBlob);
     const img = new Image();
-    img.onload = () => {
+    img.onload = function () {
         const canvas = document.createElement('canvas');
-        canvas.width = width;
-        canvas.height = height;
+        canvas.width = w * scale;
+        canvas.height = h * scale;
         const ctx = canvas.getContext('2d');
-        ctx.fillStyle = '#ffffff';
-        ctx.fillRect(0, 0, width, height);
+        if (withBg) { ctx.fillStyle = bg; ctx.fillRect(0, 0, canvas.width, canvas.height); }
+        ctx.scale(scale, scale);
         ctx.drawImage(img, 0, 0);
         URL.revokeObjectURL(url);
-        canvas.toBlob(blob => {
-            const pngUrl = URL.createObjectURL(blob);
-            const link = document.createElement('a');
-            link.download = 'flowchart.png';
-            link.href = pngUrl;
-            link.click();
-            setTimeout(() => URL.revokeObjectURL(pngUrl), 1000);
+        canvas.toBlob(function (blob) {
+            if (!blob) { notify('Errore durante l\'esportazione.'); return; }
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'flowchart.png';
+            a.click();
+            URL.revokeObjectURL(a.href);
         }, 'image/png');
     };
-    img.onerror = () => {
+    img.onerror = function () {
         URL.revokeObjectURL(url);
-        const fallback = document.createElement('a');
-        fallback.download = 'flowchart.svg';
-        fallback.href = URL.createObjectURL(svgBlob);
-        fallback.click();
+        notify('Impossibile generare l\'immagine. Il browser potrebbe bloccare l\'esportazione di contenuti complessi.');
     };
     img.src = url;
 }
 
 function showExportVectorWindow() {
-    showModalWindow('Esporta Vettoriale', `
-        <p>Esporta il flowchart come file SVG.</p>
-        <div class="dialog-field" style="margin-top:15px;">
-            <label>Formato:</label>
-            <select style="width:100%; padding:6px; margin-top:4px;">
-                <option>SVG</option>
-                <option>PDF</option>
-                <option>EPS</option>
-            </select>
-        </div>
-    `);
+    const overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.style.display = 'flex';
+    overlay.innerHTML = `
+        <div class="dialog-window">
+            <div class="dialog-titlebar">
+                <span>Esporta Vettoriale</span>
+                <button class="dialog-close">✕</button>
+            </div>
+            <div class="dialog-body">
+                <p>Esporta il flowchart come file SVG vettoriale.</p>
+            </div>
+            <div class="dialog-footer">
+                <button class="dialog-btn primary">Esporta SVG</button>
+                <button class="dialog-btn">Annulla</button>
+            </div>
+        </div>`;
+    document.body.appendChild(overlay);
+    function close() { overlay.remove(); }
+    overlay.querySelector('.dialog-close').addEventListener('click', close);
+    overlay.querySelectorAll('.dialog-btn')[1].addEventListener('click', close);
+    overlay.querySelector('.dialog-btn.primary').addEventListener('click', () => {
+        close();
+        exportFlowchartSVG();
+    });
+}
+
+function exportFlowchartSVG() {
+    const content = document.getElementById('flowchartContent');
+    if (!content) { notify('Nessun flowchart da esportare.'); return; }
+    const rect = content.getBoundingClientRect();
+    const w = Math.ceil(rect.width) + 40;
+    const h = Math.ceil(rect.height) + 40;
+    const clone = content.cloneNode(true);
+    clone.querySelectorAll('.insert-dot, .shape-delete').forEach(el => el.remove());
+    clone.style.transform = 'none';
+    let cssText = '';
+    try {
+        for (const sheet of document.styleSheets) {
+            try { for (const rule of sheet.cssRules) cssText += rule.cssText + '\n'; } catch (e) {}
+        }
+    } catch (e) {}
+    const bg = getComputedStyle(document.querySelector('.flowchart-canvas')).backgroundColor || '#FFFFFF';
+    const xml = new XMLSerializer().serializeToString(clone);
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}">
+        <foreignObject width="100%" height="100%">
+            <div xmlns="http://www.w3.org/1999/xhtml" style="width:${w}px;height:${h}px;background:${bg};padding:20px;box-sizing:border-box;display:flex;justify-content:center;">
+                <style>${cssText}</style>
+                ${xml}
+            </div>
+        </foreignObject>
+    </svg>`;
+    const blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'flowchart.svg';
+    a.click();
+    URL.revokeObjectURL(a.href);
 }
 
 function showSpeedWindow() {
@@ -1991,17 +2263,149 @@ document.querySelectorAll('.menu-option').forEach(opt => {
     });
 });
 
+// ============ FORMATO FILE FLOWGORITHM (.fprg XML) ============
+function buildFprg(program) {
+    function escAttr(s) {
+        return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+    function nodeToXml(node, indent) {
+        const ind = '  '.repeat(indent);
+        switch (node.type) {
+            case 'declare':
+                return `${ind}<declare name="${escAttr(node.name)}" type="${escAttr(node.varType)}" array="${node.isArray?'True':'False'}" size="${escAttr(node.size||'')}"/>\n`;
+            case 'assign':
+                return `${ind}<assign variable="${escAttr(node.variable)}" expression="${escAttr(node.expression)}"/>\n`;
+            case 'input':
+                return `${ind}<input variable="${escAttr(node.variable)}"/>\n`;
+            case 'output':
+                return `${ind}<output expression="${escAttr(node.expression)}" newline="${node.newLine?'True':'False'}"/>\n`;
+            case 'call':
+                return `${ind}<call expression="${escAttr(node.expression)}"/>\n`;
+            case 'comment':
+                return `${ind}<comment text="${escAttr(node.text)}"/>\n`;
+            case 'breakpoint':
+                return `${ind}<breakpoint expression="${escAttr(node.condition||'')}"/>\n`;
+            case 'if': {
+                let s = `${ind}<if expression="${escAttr(node.condition)}">\n`;
+                s += `${ind}  <then>\n`;
+                node.trueBranch.forEach(n => s += nodeToXml(n, indent+2));
+                s += `${ind}  </then>\n`;
+                s += `${ind}  <else>\n`;
+                node.falseBranch.forEach(n => s += nodeToXml(n, indent+2));
+                s += `${ind}  </else>\n`;
+                s += `${ind}</if>\n`;
+                return s;
+            }
+            case 'while':
+                return `${ind}<while expression="${escAttr(node.condition)}">\n` +
+                    node.body.map(n => nodeToXml(n, indent+1)).join('') + `${ind}</while>\n`;
+            case 'do':
+                return `${ind}<do expression="${escAttr(node.condition)}">\n` +
+                    node.body.map(n => nodeToXml(n, indent+1)).join('') + `${ind}</do>\n`;
+            case 'for':
+                return `${ind}<for variable="${escAttr(node.variable)}" start="${escAttr(node.start)}" end="${escAttr(node.end)}" step="${escAttr(node.step)}" direction="${escAttr(node.direction)}">\n` +
+                    node.body.map(n => nodeToXml(n, indent+1)).join('') + `${ind}</for>\n`;
+        }
+        return '';
+    }
+    let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    xml += '<flowgorithm fileversion="4.2">\n';
+    xml += '  <attributes>\n';
+    xml += '    <attribute name="name" value=""/>\n';
+    xml += '    <attribute name="authors" value="PiBOH"/>\n';
+    xml += '    <attribute name="about" value="Created with Flowgorithm Online"/>\n';
+    xml += '    <attribute name="saved" value="' + new Date().toISOString() + '"/>\n';
+    xml += '  </attributes>\n';
+    xml += '  <function name="Main" type="None" variable="">\n';
+    xml += '    <parameters/>\n';
+    xml += '    <body>\n';
+    program.forEach(n => xml += nodeToXml(n, 3));
+    xml += '    </body>\n';
+    xml += '  </function>\n';
+    xml += '</flowgorithm>\n';
+    return xml;
+}
+
+function parseFprg(xmlText) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(xmlText, 'text/xml');
+    if (doc.querySelector('parsererror')) {
+        throw new Error('XML non valido');
+    }
+    function parseChildren(parentEl) {
+        const result = [];
+        if (!parentEl) return result;
+        for (const el of parentEl.children) {
+            const node = elToNode(el);
+            if (node) result.push(node);
+        }
+        return result;
+    }
+    function elToNode(el) {
+        const tag = el.tagName.toLowerCase();
+        const a = name => el.getAttribute(name) || '';
+        switch (tag) {
+            case 'declare':
+                return createNode('declare', {
+                    name: a('name'), varType: a('type') || 'Integer',
+                    isArray: a('array') === 'True', size: a('size')
+                });
+            case 'assign':
+                return createNode('assign', { variable: a('variable'), expression: a('expression') });
+            case 'input':
+                return createNode('input', { variable: a('variable') });
+            case 'output':
+                return createNode('output', { expression: a('expression'), newLine: a('newline') !== 'False' });
+            case 'call':
+                return createNode('call', { expression: a('expression') });
+            case 'comment':
+                return createNode('comment', { text: a('text') });
+            case 'breakpoint':
+                return createNode('breakpoint', { condition: a('expression') });
+            case 'if': {
+                const thenEl = el.querySelector(':scope > then');
+                const elseEl = el.querySelector(':scope > else');
+                return createNode('if', {
+                    condition: a('expression'),
+                    trueBranch: parseChildren(thenEl),
+                    falseBranch: parseChildren(elseEl)
+                });
+            }
+            case 'while':
+                return createNode('while', { condition: a('expression'), body: parseChildren(el) });
+            case 'do':
+                return createNode('do', { condition: a('expression'), body: parseChildren(el) });
+            case 'for':
+                return createNode('for', {
+                    variable: a('variable'), start: a('start'), end: a('end'),
+                    step: a('step') || '1', direction: a('direction') || 'up',
+                    body: parseChildren(el)
+                });
+        }
+        return null;
+    }
+    const bodyEl = doc.querySelector('function > body') || doc.querySelector('body');
+    return parseChildren(bodyEl);
+}
+
 function handleAction(action) {
     switch (action) {
         case 'new':
-            if (confirm(t('msg.newConfirm'))) {
+            confirmModal(t('msg.newConfirm'), () => {
+                pushUndo();
                 state.program = [];
                 state.variables = {};
                 state.nextId = 1;
                 render();
                 clearConsole();
                 updateVariablesUI();
-            }
+            });
+            break;
+        case 'undo':
+            undo();
+            break;
+        case 'redo':
+            redo();
             break;
         case 'open':
             const fi = document.createElement('input');
@@ -2014,18 +2418,16 @@ function handleAction(action) {
                 r.onload = (ev) => {
                     try {
                         const content = ev.target.result;
+                        pushUndo();
                         if (f.name.endsWith('.fprg')) {
-                            // Prova a caricare come XML Flowgorithm (semplificato)
-                            // Per ora, carichiamo solo il formato JSON interno
-                            // Il formato .fprg nativo richiede il software Flowgorithm
-                            alert('Il formato .fprg nativo di Flowgorithm non è completamente supportato.\nCaricamento come JSON...');
-                            state.program = JSON.parse(content);
+                            const parsed = parseFprg(content);
+                            state.program = parsed;
                         } else {
                             state.program = JSON.parse(content);
                         }
                         render();
                     } catch(err) { 
-                        alert(t('msg.invalidFile') + '\n' + err.message); 
+                        notify(t('msg.invalidFile') + '\n' + err.message); 
                     }
                 };
                 r.readAsText(f);
@@ -2034,15 +2436,15 @@ function handleAction(action) {
             break;
         case 'save':
         case 'saveas':
-            // Salva in formato JSON compatibile (può essere rinominato in .fprg)
-            const jsonContent = JSON.stringify(state.program, null, 2);
-            const jsonBlob = new Blob([jsonContent], {type:'application/json'});
-            const jsonUrl = URL.createObjectURL(jsonBlob);
-            const jsonA = document.createElement('a');
-            jsonA.href = jsonUrl; 
-            jsonA.download = 'programma.fprg.json'; 
-            jsonA.click();
-            URL.revokeObjectURL(jsonUrl);
+            // Salva in formato .fprg XML compatibile con Flowgorithm
+            const fprgContent = buildFprg(state.program);
+            const fprgBlob = new Blob([fprgContent], {type:'text/xml'});
+            const fprgUrl = URL.createObjectURL(fprgBlob);
+            const fprgA = document.createElement('a');
+            fprgA.href = fprgUrl;
+            fprgA.download = 'programma.fprg';
+            fprgA.click();
+            URL.revokeObjectURL(fprgUrl);
             break;
         case 'run':
             runProgram(false);
@@ -2228,6 +2630,9 @@ document.addEventListener('keydown', (e) => {
     else if (e.ctrlKey && e.key === 's') { e.preventDefault(); handleAction('save'); }
     else if (e.ctrlKey && e.key === 'o') { e.preventDefault(); handleAction('open'); }
     else if (e.ctrlKey && e.key === 'n') { e.preventDefault(); handleAction('new'); }
+    else if (e.ctrlKey && e.shiftKey && (e.key === 'z' || e.key === 'Z')) { e.preventDefault(); redo(); }
+    else if (e.ctrlKey && (e.key === 'z' || e.key === 'Z')) { e.preventDefault(); undo(); }
+    else if (e.ctrlKey && (e.key === 'y' || e.key === 'Y')) { e.preventDefault(); redo(); }
     else if (e.ctrlKey && (e.key === '+' || e.key === '=')) { e.preventDefault(); handleAction('zoomin'); }
     else if (e.ctrlKey && e.key === '-') { e.preventDefault(); handleAction('zoomout'); }
 });
@@ -2244,17 +2649,16 @@ window.addEventListener('DOMContentLoaded', () => {
             applyLanguage(e.target.value);
         });
     }
-    try {
-        const savedStyle = localStorage.getItem('flowgorithm_style');
-        if (savedStyle) {
-            document.documentElement.classList.add('style-' + savedStyle);
-            state.flowchartStyle = savedStyle;
-        }
-    } catch(e) {}
     
+    // Carica schema colore preferito
+    let savedScheme = 'Classic';
+    try { savedScheme = localStorage.getItem('flowgorithm_scheme') || 'Classic'; } catch(e) {}
+    applyColorScheme(savedScheme);
+
     // Applica lingua (renderizza anche il flowchart)
     applyLanguage(savedLang);
     updateStatus();
+    updateUndoButtons();
 });
 
 // Click su forma per selezione

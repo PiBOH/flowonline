@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flowgorithm Online BETA 1.0.0k</title>
+    <title>Flowonline BETA 1.0.0q-opzb</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
         <div class="title-bar">
             <div class="title-left">
                 <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='4' y='4' width='10' height='8' fill='%2384C44C' stroke='%23333' stroke-width='1.5'/><rect x='18' y='4' width='10' height='8' fill='%23F2A93B' stroke='%23333' stroke-width='1.5'/><polygon points='4,18 14,18 12,26 6,26' fill='%23E14C4C' stroke='%23333' stroke-width='1.5'/><polygon points='18,18 28,18 26,26 20,26' fill='%234B9DDC' stroke='%23333' stroke-width='1.5'/></svg>" class="title-icon">
-                <span class="title-text" id="titleText">Flowgorithm Online BETA 1.0.0k - [Untitled]</span>
+                <span class="title-text" id="titleText">Flowonline BETA 1.0.0q-opzb - [Untitled]</span>
             </div>
             <div class="title-controls">
                 <button class="win-btn min-btn" title="Minimizza">─</button>
@@ -74,7 +74,7 @@
             </div>
             <div class="menu-item" data-menu="help"><span data-i18n="menu.help">Aiuto</span>
                 <div class="menu-dropdown">
-                    <div class="menu-option" data-action="about"><span data-i18n="menu.about">Informazioni su Flowgorithm</span></div>
+                    <div class="menu-option" data-action="about"><span data-i18n="menu.about">Informazioni su Flowonline</span></div>
                 </div>
             </div>
         </div>
@@ -86,6 +86,13 @@
             </button>
             <button class="tool-btn" data-tool="save" title="Salva (Ctrl+S)">
                 <svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 3h15l3 3v15H3z" fill="#4A6FA5" stroke="#1F3354" stroke-width="1"/><rect x="6" y="3" width="10" height="6" fill="#E6EEF7" stroke="#1F3354" stroke-width="0.8"/><rect x="13" y="4" width="2" height="4" fill="#1F3354"/><rect x="6" y="13" width="12" height="7" fill="#E6EEF7" stroke="#1F3354" stroke-width="0.8"/></svg>
+            </button>
+            <div class="toolbar-sep"></div>
+            <button class="tool-btn" data-tool="undo" title="Annulla (Ctrl+Z)" style="opacity:0.4;">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 7 L3 12 L8 17" fill="none" stroke="#444" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 12 H15 a5 5 0 0 1 5 5 v1" fill="none" stroke="#444" stroke-width="2.2" stroke-linecap="round"/></svg>
+            </button>
+            <button class="tool-btn" data-tool="redo" title="Ripeti (Ctrl+Y)" style="opacity:0.4;">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M16 7 L21 12 L16 17" fill="none" stroke="#444" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12 H9 a5 5 0 0 0 -5 5 v1" fill="none" stroke="#444" stroke-width="2.2" stroke-linecap="round"/></svg>
             </button>
             <div class="toolbar-sep"></div>
             <button class="tool-btn" data-tool="run" title="Esegui (F5)">
@@ -185,7 +192,7 @@
             <div class="status-section"><span data-i18n="status.zoom">Zoom</span>: <span id="zoomLevel">100%</span></div>
             <div class="status-section"><span data-i18n="status.shapes">Forme</span>: <span id="shapeCount">0</span></div>
             <div class="status-section flex-grow" id="statusLanguage">Italiano</div>
-            <div class="status-section version-info">BETA 1.0.0k</div>
+            <div class="status-section version-info">BETA 1.0.0q-opzb</div>
         </div>
     </div>
 
@@ -337,38 +344,41 @@
     <div class="modal-overlay" id="aboutWindow" style="display:none;">
         <div class="dialog-window about-dialog">
             <div class="dialog-titlebar">
-                <span>Informazioni su Flowgorithm Online</span>
+                <span>Informazioni su Flowonline</span>
                 <button class="dialog-close" id="aboutClose">✕</button>
             </div>
             <div class="dialog-body about-body">
                 <div class="about-header">
-                    <h2>Flowgorithm Online</h2>
-                    <p class="version">Versione BETA 1.0.0k</p>
+                    <h2>Flowonline BETA</h2>
+                    <p class="version">Versione BETA 1.0.0q-opzb</p>
                 </div>
                 <div class="about-info">
-                    <p><strong>Autore:</strong> <a href="https://piboh.github.io" target="_blank">PiBOH</a></p>
+                    <p><strong>Autore:</strong> <a href="https://github.com/PiBOH" target="_blank">PiBOH</a></p>
+                    <p><strong>Repository:</strong> <a href="https://github.com/PiBOH/flowonline/" target="_blank">github.com/PiBOH/flowonline</a></p>
                     <p><strong>Sito web:</strong> <a href="https://piboh.github.io" target="_blank">https://piboh.github.io</a></p>
-                    <p><strong>Licenza:</strong> MIT License</p>
+                    <p><strong>Licenza:</strong> <a href="https://github.com/PiBOH/flowgorithmonline/blob/main/LICENSE" target="_blank" id="licenseGithubLink">Vedi su GitHub</a></p>
                 </div>
                 <div class="about-description">
                     <p>Replica web dell'interfaccia di Flowgorithm per scopi didattici.</p>
                     <p>Permette di creare, modificare ed eseguire flowchart in modo visuale.</p>
                 </div>
                 <div class="about-license">
-                    <h3>Licenza MIT</h3>
-                    <pre class="license-text">Copyright (c) 2026 PiBOH
+                    <h3>MIT License</h3>
+                    <pre class="license-text" id="licenseText">MIT License
+
+Copyright (c) 2026 Pietro Bonaldo
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
+of this software and associated documentation files (the Software), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+furnished to do so, subject to the following conditions
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+THE SOFTWARE IS PROVIDED AS IS, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
