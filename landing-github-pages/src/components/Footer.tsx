@@ -18,7 +18,7 @@ const COLS = [
       { label: "Apri l'editor", href: LINKS.app, ext: true },
       { label: "Repository GitHub", href: LINKS.github, ext: true },
       { label: "Ultime release", href: LINKS.releases, ext: true },
-      { label: "Flowgorithm", href: "http://www.flowgorithm.org", ext: true },
+      { label: "Flowgorithm (quello originale)", href: "http://www.flowgorithm.org", ext: true },
     ],
   },
 ];

@@ -79,12 +79,12 @@ export function Hero() {
           <h1 className="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
             Disegna la logica.
             <br />
-            <span className="text-gradient">Eseguiscila nel browser.</span>
+            <span className="text-gradient">Eseguila nel browser.</span>
           </h1>
 
           <p className="mt-6 text-lg leading-relaxed text-zinc-400">
             FlowOnline è l'editor a diagrammi di flusso che gira ovunque: crea
-            algoritmi trascinando i blocchi, eseguili passo per passo e
+            algoritmi aggiungendo i blocchi, eseguili passo per passo e
             osserva variabili e output, il tutto senza installare nulla.
           </p>
 

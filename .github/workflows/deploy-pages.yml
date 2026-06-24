@@ -12,7 +12,7 @@
 #  In questo modo il workflow assume il controllo dell'intero deploy.
 # =====================================================================
 
-name: deploy-pages.tml
+name: deploy-pages.yml
 
 on:
   push:

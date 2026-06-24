@@ -1,7 +1,7 @@
 export const LINKS = {
   app: "https://piboh.github.io/flowonline",
   github: "https://github.com/PiBOH/flowonline",
-  releases: "https://github.com/PiBOH/flowonline/releases/latest",
+  releases: "https://github.com/PiBOH/flowonline/releases",
   author: "https://github.com/PiBOH",
 };
 
