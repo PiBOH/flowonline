@@ -172,7 +172,7 @@ export const CODE_SAMPLES: CodeSample[] = [
     label: "Python",
     lang: "python",
     code: [
-      "eta = int(input('Inserisci la tua eta: '))",
+      "eta = int(input('Inserisci la tua età: '))",
       "",
       "if eta >= 18:",
       "    print('Maggiorenne')",
@@ -185,7 +185,7 @@ export const CODE_SAMPLES: CodeSample[] = [
     label: "JavaScript",
     lang: "javascript",
     code: [
-      "const eta = Number(prompt('Inserisci la tua eta'));",
+      "const eta = Number(prompt('Inserisci la tua età'))",
       "",
       "if (eta >= 18) {",
       "  console.log('Maggiorenne');",

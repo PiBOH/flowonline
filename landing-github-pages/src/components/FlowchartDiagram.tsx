@@ -42,7 +42,7 @@ const NODES: Node[] = [
     s: 14,
     color: "#fbbf24",
     fill: "rgba(251,191,36,0.14)",
-    label: ["Output", '"Inserisci eta"'],
+    label: ["Output", '"Inserisci età"'],
   },
   {
     id: "in",
@@ -118,7 +118,7 @@ const EDGE_LABELS = [
   { x: 200, y: 92, t: "" },
   { x: 200, y: 162, t: "" },
   { x: 200, y: 240, t: "" },
-  { x: 270, y: 291, t: "Si" },
+  { x: 270, y: 291, t: "Sì" },
   { x: 100, y: 291, t: "No" },
 ];
 

@@ -6,7 +6,7 @@ type Line = { text: string; cls: string };
 function buildLines(active: number): Line[] {
   const lines: Line[] = [];
   if (active >= 1)
-    lines.push({ text: "Inserisci la tua eta:", cls: "text-amber-200" });
+    lines.push({ text: "Inserisci la tua età:", cls: "text-amber-200" });
   if (active >= 2) lines.push({ text: "> 20", cls: "text-sky-300" });
   if (active === 4) lines.push({ text: "Maggiorenne", cls: "text-emerald-300" });
   if (active === 5) lines.push({ text: "Minorenne", cls: "text-rose-300" });

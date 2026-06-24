@@ -78,7 +78,7 @@ export function CodeShowcase() {
             eyebrow="Generazione di codice"
             eyebrowClass="text-amber-300"
             title="Lo stesso diagramma, tanti linguaggi"
-            subtitle="Disegna una volta la logica: FlowOnline la converte automaticamente nel codice del linguaggio che stai studiando."
+            subtitle="Digita la logica una sola volta: FlowOnline la converte automaticamente nel codice del linguaggio che stai studiando."
           />
         </Reveal>
 
