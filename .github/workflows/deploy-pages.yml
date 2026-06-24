@@ -12,7 +12,7 @@
 #  In questo modo il workflow assume il controllo dell'intero deploy.
 # =====================================================================
 
-name: Deploy to GitHub Pages
+name: deploy-pages.tml
 
 on:
   push:
