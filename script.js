@@ -49,7 +49,7 @@ const i18n = {
         'msg.invalidFile': 'File non valido o corrotto',
         'msg.speed': 'Velocità', 'msg.lang': 'Lingua corrente',
         'msg.delete': 'Eliminare questa forma?',
-        'msg.about': 'Flowgorithm Online\nVersione BETA 1.0.0q\n\nReplica web dell\'interfaccia di Flowgorithm\nAutore: PiBOH\nhttps://piboh.github.io\n\nMIT License:\n\nCopyright (c) 2026 Pietro Bonaldo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.',
+        'msg.about': 'Flowonline ALPHA\nVersione ALPHA 1.0.17\n\nReplica web dell\'interfaccia di Flowgorithm\nAutore: PiBOH\nhttps://piboh.github.io\nRepository: github.com/PiBOH/flowonline\n\nLa licenza viene caricata automaticamente dal repository GitHub.',
         'msg.colorscheme': 'Schema colori: feature dimostrativa',
         'msg.functions': 'Gestione funzioni: feature dimostrativa',
         'fld.variable': 'Variabile:', 'fld.expression': 'Espressione:',
@@ -110,7 +110,7 @@ const i18n = {
         'msg.invalidFile': 'Invalid file',
         'msg.speed': 'Speed', 'msg.lang': 'Current language',
         'msg.delete': 'Delete this shape?',
-        'msg.about': 'Flowgorithm Online\nVersion BETA 1.0.0q\n\nWeb replica of Flowgorithm\nAuthor: PiBOH\nhttps://piboh.github.io\n\nMIT License:\n\nCopyright (c) 2026 Pietro Bonaldo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.',
+        'msg.about': 'Flowonline ALPHA\nVersion ALPHA 1.0.17\n\nWeb replica of Flowgorithm\nAuthor: PiBOH\nhttps://piboh.github.io\nRepository: github.com/PiBOH/flowonline\n\nThe license is loaded automatically from the GitHub repository.',
         'msg.colorscheme': 'Color scheme: demo feature',
         'msg.functions': 'Function manager: demo feature',
         'fld.variable': 'Variable:', 'fld.expression': 'Expression:',
@@ -171,7 +171,7 @@ const i18n = {
         'msg.invalidFile': 'Archivo inválido',
         'msg.speed': 'Velocidad', 'msg.lang': 'Idioma actual',
         'msg.delete': '¿Eliminar esta forma?',
-        'msg.about': 'Flowgorithm Online\nVersión BETA 1.0.0q\n\nRéplica web de Flowgorithm\nAutor: PiBOH\nhttps://piboh.github.io\n\nMIT License:\n\nCopyright (c) 2026 Pietro Bonaldo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.',
+        'msg.about': 'Flowonline ALPHA\nVersión ALPHA 1.0.17\n\nRéplica web de Flowgorithm\nAutor: PiBOH\nhttps://piboh.github.io\nRepository: github.com/PiBOH/flowonline\n\nLa licencia se carga automáticamente desde el repositorio GitHub.',
         'msg.colorscheme': 'Esquema de colores: función de demostración',
         'msg.functions': 'Gestor de funciones: función de demostración',
         'fld.variable': 'Variable:', 'fld.expression': 'Expresión:',
@@ -232,7 +232,7 @@ const i18n = {
         'msg.invalidFile': 'Fichier invalide',
         'msg.speed': 'Vitesse', 'msg.lang': 'Langue actuelle',
         'msg.delete': 'Supprimer cette forme ?',
-        'msg.about': 'Flowgorithm Online\nVersion BETA 1.0.0q\n\nRéplique web de Flowgorithm\nAuteur: PiBOH\nhttps://piboh.github.io\n\nMIT License:\n\nCopyright (c) 2026 Pietro Bonaldo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.',
+        'msg.about': 'Flowonline ALPHA\nVersion ALPHA 1.0.17\n\nRéplique web de Flowgorithm\nAuteur: PiBOH\nhttps://piboh.github.io\nRepository: github.com/PiBOH/flowonline\n\nLa licence est chargée automatiquement depuis le dépôt GitHub.',
         'msg.colorscheme': 'Schéma de couleurs : fonction de démonstration',
         'msg.functions': 'Gestionnaire de fonctions : fonction de démonstration',
         'fld.variable': 'Variable :', 'fld.expression': 'Expression :',
@@ -293,7 +293,7 @@ const i18n = {
         'msg.invalidFile': 'Ungültige Datei',
         'msg.speed': 'Geschwindigkeit', 'msg.lang': 'Aktuelle Sprache',
         'msg.delete': 'Diese Form löschen?',
-        'msg.about': 'Flowgorithm Online\nVersion BETA 1.0.0q\n\nWeb-Replik von Flowgorithm\nAutor: PiBOH\nhttps://piboh.github.io\n\nMIT License:\n\nCopyright (c) 2026 Pietro Bonaldo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.',
+        'msg.about': 'Flowonline ALPHA\nVersion ALPHA 1.0.17\n\nWeb-Replik von Flowgorithm\nAutor: PiBOH\nhttps://piboh.github.io\nRepository: github.com/PiBOH/flowonline\n\nDie Lizenz wird automatisch aus dem GitHub-Repository geladen.',
         'msg.colorscheme': 'Farbschema: Demo-Funktion',
         'msg.functions': 'Funktionsverwaltung: Demo-Funktion',
         'fld.variable': 'Variable:', 'fld.expression': 'Ausdruck:',
@@ -443,9 +443,108 @@ function render() {
     container.innerHTML = '';
     renderBlock(container, state.program, true);
     updateStatus();
+    requestAnimationFrame(updateWireSvgs);
     if (document.getElementById('sourceWindow').style.display !== 'none') {
         renderSourceCode();
     }
+}
+
+function svgLine(x1, y1, x2, y2, cls = '') {
+    return `<line class="wire-line ${cls}" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" />`;
+}
+
+function svgPath(d, cls = '', marker = '') {
+    return `<path class="wire-line ${cls}" d="${d}" ${marker ? `marker-end="url(#${marker})"` : ''} />`;
+}
+
+function centerOf(el, rootRect) {
+    const r = el.getBoundingClientRect();
+    return {
+        x: r.left - rootRect.left + r.width / 2,
+        y: r.top - rootRect.top + r.height / 2,
+        left: r.left - rootRect.left,
+        right: r.right - rootRect.left,
+        top: r.top - rootRect.top,
+        bottom: r.bottom - rootRect.top,
+        width: r.width,
+        height: r.height
+    };
+}
+
+function makeWireSvg(host) {
+    host.querySelectorAll(':scope > .wire-svg').forEach(s => s.remove());
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.classList.add('wire-svg');
+    svg.setAttribute('aria-hidden', 'true');
+    svg.innerHTML = `
+        <defs>
+            <marker id="wireArrowDown" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" class="wire-arrow-fill" />
+            </marker>
+            <marker id="wireArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                <path d="M 0 0 L 10 5 L 0 10 z" class="wire-arrow-fill" />
+            </marker>
+        </defs>`;
+    host.prepend(svg);
+    return svg;
+}
+
+function updateWireSvgs() {
+    document.querySelectorAll('.shape-if').forEach(host => {
+        const diamond = host.querySelector('.diamond-shape');
+        const falseBranch = host.querySelector('.if-false');
+        const trueBranch = host.querySelector('.if-true');
+        const merge = host.querySelector('.if-merge-point');
+        if (!diamond || !falseBranch || !trueBranch || !merge) return;
+        const root = host.getBoundingClientRect();
+        const d = centerOf(diamond, root);
+        const f = centerOf(falseBranch, root);
+        const tr = centerOf(trueBranch, root);
+        const m = centerOf(merge, root);
+        const branchY = d.bottom + 20;
+        const mergeY = m.y;
+        const svg = makeWireSvg(host);
+        const w = Math.max(root.width, 1);
+        const h = Math.max(root.height, 1);
+        svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
+        svg.insertAdjacentHTML('beforeend', [
+            svgLine(d.x, d.bottom, d.x, branchY),
+            svgLine(f.x, branchY, tr.x, branchY),
+            svgLine(f.x, branchY, f.x, mergeY),
+            svgLine(tr.x, branchY, tr.x, mergeY),
+            svgLine(f.x, mergeY, tr.x, mergeY),
+            svgPath(`M ${m.x} ${mergeY} V ${Math.min(h, mergeY + 24)}`, 'wire-exit', 'wireArrow')
+        ].join(''));
+    });
+
+    document.querySelectorAll('.shape-loop').forEach(host => {
+        const hex = host.querySelector('.hexagon-shape');
+        const body = host.querySelector('.loop-body-col');
+        if (!hex || !body) return;
+        const root = host.getBoundingClientRect();
+        const hx = centerOf(hex, root);
+        const bd = centerOf(body, root);
+        const svg = makeWireSvg(host);
+        const w = Math.max(root.width, 1);
+        const h = Math.max(root.height, 1);
+        svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
+        const isDo = host.classList.contains('loop-do');
+        const rightX = isDo ? Math.max(0, bd.left - 24) : Math.min(w, bd.right + 24);
+        const sideStartX = isDo ? hx.left : hx.right;
+        const sideBodyX = isDo ? bd.right : bd.left;
+        const retY = Math.max(bd.bottom + 18, hx.bottom + 28);
+        const p1 = isDo
+            ? `M ${hx.left} ${hx.y} H ${bd.right}`
+            : `M ${hx.right} ${hx.y} H ${bd.left}`;
+        const p2 = isDo
+            ? `M ${bd.right} ${hx.y} H ${rightX} V ${retY} H ${hx.x} V ${hx.bottom}`
+            : `M ${bd.left} ${hx.y} H ${rightX} V ${retY} H ${hx.x} V ${hx.bottom}`;
+        svg.insertAdjacentHTML('beforeend', [
+            svgPath(p1, 'wire-entry', 'wireArrow'),
+            svgPath(p2, 'wire-return', 'wireArrow'),
+            svgLine(hx.x, hx.bottom, hx.x, Math.min(h, hx.bottom + 26))
+        ].join(''));
+    });
 }
 
 // renderBlock costruisce una sequenza verticale: connettore -> forma -> connettore -> forma ...
@@ -1017,8 +1116,12 @@ function closeAbout() {
 document.getElementById('aboutClose').addEventListener('click', closeAbout);
 document.getElementById('aboutOk').addEventListener('click', closeAbout);
 
-const LICENSE_RAW_URL = 'https://raw.githubusercontent.com/PiBOH/flowgorithmonline/main/LICENSE.md';
-const LICENSE_GITHUB_URL = 'https://github.com/PiBOH/flowgorithmonline/blob/main/LICENSE.md';
+const LICENSE_RAW_URLS = [
+    'https://raw.githubusercontent.com/PiBOH/flowonline/main/LICENSE.md',
+    'https://raw.githubusercontent.com/PiBOH/flowonline/main/LICENSE.txt',
+    'https://raw.githubusercontent.com/PiBOH/flowonline/main/LICENSE'
+];
+const LICENSE_GITHUB_URL = 'https://github.com/PiBOH/flowonline/blob/main/LICENSE.md';
 
 async function refreshLicenseFromGitHub() {
     const licenseEl = document.getElementById('licenseText');
@@ -1027,9 +1130,16 @@ async function refreshLicenseFromGitHub() {
     if (!licenseEl) return;
     try {
         licenseEl.textContent = 'Caricamento licenza dal repository GitHub...';
-        const res = await fetch(LICENSE_RAW_URL, { cache: 'no-store' });
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        licenseEl.textContent = await res.text();
+        let loaded = false;
+        for (const url of LICENSE_RAW_URLS) {
+            const res = await fetch(url, { cache: 'no-store' });
+            if (res.ok) {
+                licenseEl.textContent = await res.text();
+                loaded = true;
+                break;
+            }
+        }
+        if (!loaded) throw new Error('Licenza non trovata nel repository');
     } catch (err) {
         licenseEl.textContent = `MIT License
 

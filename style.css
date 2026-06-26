@@ -1,5 +1,5 @@
 /* ============================================
-   FLOWGORITHM ONLINE - STYLE.CSS  (BETA 1.0.0q)
+   FLOWONLINE - STYLE.CSS  (ALPHA 1.0.17)
    FILE PULITO - NESSUN DUPLICATO
    ============================================ */
 
@@ -114,7 +114,7 @@ html, body {
 .shape-delete:hover { background: #FF0000; }
 
 /* ====================================================
-   IF SHAPE - Flowgorithm 1.0.0q v2
+   IF SHAPE - SVG wires, no CSS arrows
    FIT-CONTENT width, NO stretching. True a destra.
    ==================================================== */
 .shape-if {
@@ -212,7 +212,7 @@ html, body {
 .if-exit-line { width: 2px; height: 16px; background: var(--line); flex-shrink: 0; }
 
 /* ====================================================
-   LOOP SHAPE (While / For / Do) - Flowgorithm 1.0.0q v2
+   LOOP SHAPE (While / For / Do) - SVG wires, no CSS arrows
    FIT-CONTENT width. Esagono a sx, corpo a dx con rails.
    ==================================================== */
 .shape-loop {
@@ -245,8 +245,8 @@ html, body {
 /* Corpo del loop: 3 lati (TOP + RIGHT + BOTTOM), aperto a sinistra */
 .loop-body-col {
     position: relative; min-width: 150px; padding: 6px 8px;
-    border-top: 2px solid var(--line); border-right: 2px solid var(--line); border-bottom: 2px solid var(--line);
-    border-radius: 0 6px 6px 0; z-index: 1; margin-left: 0; margin-top: 23px;
+    border: none;
+    border-radius: 0; z-index: 1; margin-left: 0; margin-top: 23px;
 }
 
 /* Linea orizzontale dall'esagono al corpo (in alto, allineata al centro dell'esagono) */
@@ -262,8 +262,8 @@ html, body {
 .shape-loop.loop-do .loop-label-loop { right: auto; left: -50px; }
 .shape-loop.loop-do .loop-label-exit { left: auto; right: 10px; }
 .shape-loop.loop-do .loop-body-col {
-    border-top: 2px solid var(--line); border-left: 2px solid var(--line); border-bottom: 2px solid var(--line);
-    border-right: none; border-radius: 6px 0 0 6px;
+    border: none;
+    border-radius: 0;
 }
 .shape-loop.loop-do .loop-body-col::before { left: auto; right: -20px; }
 .shape-loop.loop-do .loop-body-col::after { left: auto; right: -8px; border-right: none; border-left: 8px solid var(--line); }
@@ -382,4 +382,49 @@ body.scheme-dark .if-edge-label, body.scheme-dark .loop-label-loop, body.scheme-
 ::-webkit-scrollbar-thumb { background: linear-gradient(to right, #C0C0C0, #A0A0A0); border: 1px solid #888; }
 ::-webkit-scrollbar-thumb:hover { background: linear-gradient(to right, #B0B0B0, #909090); }
 ::-webkit-scrollbar-corner { background: #F0F0F0; }
-/* Fine style.css - versione 1.0.0q CLEAN */
+/* ============ SVG WIRE LAYER ============ */
+.wire-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+    z-index: 0;
+}
+.wire-line {
+    fill: none;
+    stroke: var(--line);
+    stroke-width: 2;
+    stroke-linecap: square;
+    stroke-linejoin: miter;
+}
+.wire-arrow-fill { fill: var(--line); }
+
+/* Disattiva tutte le frecce/linee CSS vecchie: le linee sono solo SVG. */
+.if-diamond-row::after,
+.if-branches::before,
+.if-branches::after,
+.if-branch::before,
+.if-branch::after,
+.if-merge-row::before,
+.if-merge-row::after,
+.loop-hex-col::before,
+.loop-hex-col::after,
+.loop-body-col::before,
+.loop-body-col::after,
+.loop-main-row::after {
+    content: none;
+    display: none;
+}
+
+.shape-if,
+.shape-loop { isolation: isolate; }
+.diamond-shape,
+.hexagon-shape,
+.if-edge-label,
+.loop-label-loop,
+.loop-label-exit,
+.flow-shape { z-index: 2; }
+
+/* Fine style.css - versione ALPHA 1.0.17 */
